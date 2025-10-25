@@ -83,7 +83,7 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 
 ---
 
-![Research Portfolio](https://github.com/smartlegionlab/alexander-suvorov.ru/blob/master/images/academic_portfolio.png)
+![Technical Portfolio](https://github.com/smartlegionlab/alexander-suvorov.ru/blob/master/data/images/academic_portfolio.png)
 
 ---
 
