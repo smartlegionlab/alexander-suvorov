@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alexander Suvorov - Independent Research & Security Paradigms</title>
+    <meta name="description" content="Independent Researcher. Author of Pointer-Based Security & Local Data Regeneration paradigms. Published theoretical work.">
+    <meta name="author" content="Alexander Suvorov">
+    <meta name="copyright" content="Alexander Suvorov">
+
+    <link rel="canonical" href="https://alexander-suvorov.ru/">
+    <link rel="author" href="https://orcid.org/0009-0006-3427-9611">
+
+    <meta property="og:title" content="Alexander Suvorov - Independent Research & Security Paradigms">
+    <meta property="og:description" content="Independent Researcher. Author of Pointer-Based Security and Local Data Regeneration paradigms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexander-suvorov.ru/">
+    <meta property="og:site_name" content="Alexander Suvorov - Research">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Alexander Suvorov",
+            "url": "https://alexander-suvorov.ru/",
+            "description": "Independent Researcher and Author of the Pointer-Based Security and Local Data Regeneration paradigms",
+            "sameAs": [
+                "https://orcid.org/0009-0006-3427-9611",
+                "https://doi.org/10.5281/zenodo.17204738",
+                "https://doi.org/10.5281/zenodo.17264327",
+                "https://doi.org/10.5281/zenodo.17383447",
+                "https://independent.academia.edu/smartlegionlab",
+                "https://zenodo.org/search?q=Alexander%20Suvorov"
+            ]
+        }
+    </script>
+
+    <meta name="theme-color" content="#0d1117">
+
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap_icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%230d6efd'/><stop offset='100%' stop-color='%230b5ed7'/></linearGradient></defs><path d='M50 15 L20 30 L20 45 C20 65 35 85 50 90 C65 85 80 65 80 45 L80 30 Z' fill='url(%23grad)' stroke='%23ffffff' stroke-width='2'/><path d='M45 55 L35 45 L40 40 L45 45 L60 30 L65 35 Z' fill='%23ffffff'/></svg>">
+</head>
+<body role="document">
+<div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+</div>
+
+<button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <i class="bi bi-chevron-up" aria-hidden="true"></i>
+</button>
+<div class="container">
+    <div class="paper-container">
+        <header class="professional-header" id="hero">
+            <div class="container">
+                <div class="header-content">
+                    <div class="main-profile-row">
+                        <div class="avatar-container">
+                            <div class="profile-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                                     class="bi bi-incognito text-dark" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205l-.014-.058-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5s-1.411-.136-2.025-.267c-.541-.115-1.093.2-1.239.735m.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a30 30 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274M3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5m-1.5.5q.001-.264.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085q.084.236.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="name">Alexander Suvorov</h1>
+                            <p class="title">Research Scientist | Author of Pointer-Based Security & Local Data Regeneration Paradigms</p>
+                            <div class="badges">
+                                <span class="badge">Paradigms Author</span>
+                                <span class="badge">Theoretical Research</span>
+                                <span class="badge">Security Architecture</span>
+                                <span class="badge">Information Theory</span>
+                                <span class="badge">Published Researcher</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-number" id="header-downloads">350+</div>
+                            <div class="stat-label">Paper Downloads</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="header-views">374+</div>
+                            <div class="stat-label">Paper Views</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="header-repos">3</div>
+                            <div class="stat-label">Research Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="header-pypi">2</div>
+                            <div class="stat-label">Published Paradigms</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="header-monthly">750+</div>
+                            <div class="stat-label">Total Downloads</div>
+                        </div>
+                    </div>
+
+                    <nav class="navigation" aria-label="Main navigation">
+                        <a href="#research" class="nav-btn" aria-label="Go to Research section">
+                            <i class="bi bi-journal-text" aria-hidden="true"></i>
+                            <span>Research</span>
+                        </a>
+                        <a href="#expertise" class="nav-btn" aria-label="Go to Expertise section">
+                            <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                            <span>Expertise</span>
+                        </a>
+                        <a href="#publications" class="nav-btn" aria-label="Go to Publications section">
+                            <i class="bi bi-archive" aria-hidden="true"></i>
+                            <span>Publications</span>
+                        </a>
+                        <a href="#contact" class="nav-btn" aria-label="Go to Contact section">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                            <span>Contact</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="row" style="color: rgb(207, 198, 198);">
+                    <div class="col-lg-8">
+                        <div class="about-card">
+                            <h3 class="about-title"><i class="bi bi-person" aria-hidden="true"></i> Research Profile</h3>
+                            <div class="profile-content">
+                                <p class="mb-3">
+                                    <strong>Research Scientist</strong> focused on fundamental computer science and information theory.
+                                    Author of groundbreaking paradigms including
+                                    <span class="highlight-accent">Pointer-Based Security</span> and
+                                    <span class="highlight-accent">Local Data Regeneration</span>.
+                                </p>
+
+                                <p class="mb-3">
+                                    My work challenges conventional approaches to digital security and information transmission,
+                                    proposing <span class="highlight-primary">architectural shifts</span> that eliminate vulnerable data existence
+                                    and redefine communication as <span class="highlight-primary">synchronous state discovery</span>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <h3 class="about-title"><i class="bi bi-lightbulb" aria-hidden="true"></i> Research & Innovation</h3>
+                            <p class="mb-3">
+                                Author of published paradigms: <strong>The Pointer-Based Security Paradigm</strong> and
+                                <strong>The Local Data Regeneration Paradigm</strong>
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-shield-check text-success me-2 mt-1" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Pointer-Based Security Paradigm:</strong>
+                                            <div class="text-muted small">Redefines digital security by architecting systems where vulnerable data doesn't exist</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-arrow-repeat text-success me-2 mt-1" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Local Data Regeneration Paradigm:</strong>
+                                            <div class="text-muted small">Proposes alternative to classical information transmission through state discovery</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-cloud-download text-success me-2 mt-1" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Academic Recognition:</strong>
+                                            <div class="text-muted small">Published research with 350+ unique downloads across global academic platforms</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-cpu text-success me-2 mt-1" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Experimental Validation:</strong>
+                                            <div class="text-muted small">Deterministic Game Engine demonstrates practical feasibility of paradigms</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card research-card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center mb-3">Research Impact Metrics</h3>
+                                <hr>
+                                <div class="metrics-stack">
+                                    <div class="metric-item">
+                                        <div class="metric-icon-small">
+                                            <i class="bi bi-cloud-download" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="metric-content">
+                                            <div class="metric-number" id="metric-downloads">350+</div>
+                                            <div class="metric-label">Unique Paper Downloads</div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-icon-small">
+                                            <i class="bi bi-cloud-download" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="metric-content">
+                                            <div class="metric-number" id="total-metric-downloads">750+</div>
+                                            <div class="metric-label">Total Paper Downloads</div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-icon-small">
+                                            <i class="bi bi-eye" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="metric-content">
+                                            <div class="metric-number" id="metric-views">350+</div>
+                                            <div class="metric-label">Unique Paper Views</div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-icon-small">
+                                            <i class="bi bi-eye" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="metric-content">
+                                            <div class="metric-number" id="total-metric-views">750+</div>
+                                            <div class="metric-label">Total Paper Views</div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-icon-small">
+                                            <i class="bi bi-journal-text" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="metric-content">
+                                            <div class="metric-number" id="metric-repos">3</div>
+                                            <div class="metric-label">Research Publications</div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-icon-small">
+                                            <i class="bi bi-lightbulb" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="metric-content">
+                                            <div class="metric-number" id="metric-pypi">2</div>
+                                            <div class="metric-label">Published Paradigms</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="research">
+            <div class="container">
+                <h2 class="section-title">Research Paradigms</h2>
+
+                <div class="card research-card mb-5">
+                    <div class="card-body d-flex flex-column">
+                        <div class="research-header text-center">
+                            <i class="bi bi-shield-check paradigm-icon" aria-hidden="true"></i>
+                            <h3>Pointer-Based Security Paradigm</h3>
+                            <p class="research-subtitle">Architectural Shift from Data Protection to Data Non-Existence</p>
+                        </div>
+
+                        <p class="research-description">
+                            A fundamental <span class="highlight-primary">rethinking of digital security architecture</span>
+                            that <span class="highlight-accent">eliminates vulnerable data existence</span> rather
+                            than <span class="highlight-muted">protecting it through conventional encryption</span>.
+                        </p>
+
+                        <div class="research-links">
+                            <div class="btn-group btn-group-sm d-flex flex-wrap">
+                                <a target="_blank" href="https://doi.org/10.5281/zenodo.17204738"
+                                   class="btn btn-outline-primary me-1 mb-1">
+                                    <i class="bi bi-journal-text" aria-hidden="true"></i> Paper
+                                </a>
+                                <a target="_blank" href="https://zenodo.org/records/17204738/files/suvorov-the-pointer-based-security-paradigm-v2.pdf?download=1"
+                                   class="btn btn-outline-primary me-1 mb-1">
+                                    <i class="bi bi-file-pdf" aria-hidden="true"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="citation-tabs-container mt-3">
+                            <div class="citation-format">
+                                <button class="copy-btn" data-text="@misc{suvorov_2025_17204738,
+  author       = {Suvorov, Alexander},
+  title        = {The Pointer-Based Security Paradigm: Architectural
+                   Shift from Data Protection to Data Non-Existence},
+  month        = sep,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17204738},
+  url          = {https://doi.org/10.5281/zenodo.17204738},
+}">
+                                    <i class="bi bi-clipboard" aria-hidden="true"></i> Copy BibTeX
+                                </button>
+                                <pre class="citation-text">@misc{suvorov_2025_17204738,
+  author       = {Suvorov, Alexander},
+  title        = {The Pointer-Based Security Paradigm: Architectural
+                   Shift from Data Protection to Data Non-Existence},
+  month        = sep,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17204738},
+  url          = {https://doi.org/10.5281/zenodo.17204738},
+}</pre>
+                            </div>
+                        </div>
+
+                        <div class="research-stats-grid">
+                            <div class="stat-item">
+                                <div class="stats-label">Views</div>
+                                <hr>
+                                <div class="stats-number" id="pointer-views">205/450</div>
+                                <hr>
+                                <div class="stats-label">Unique/Total</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stats-label">Downloads</div>
+                                <hr>
+                                <div class="stats-number" id="pointer-downloads">192/380</div>
+                                <hr>
+                                <div class="stats-label">Unique/Total</div>
+                            </div>
+                        </div>
+
+                        <div class="research-metadata">
+                            <div class="metadata-item">
+                                <span class="metadata-label">DOI:</span>
+                                <span class="metadata-value">10.5281/zenodo.17204738</span>
+                            </div>
+                            <div class="metadata-item">
+                                <span class="metadata-label">Published:</span>
+                                <span class="metadata-value">September 26, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card research-card mb-5">
+                    <div class="card-body d-flex flex-column">
+                        <div class="research-header text-center">
+                            <i class="bi bi-arrow-repeat paradigm-icon" aria-hidden="true"></i>
+                            <h3>Local Data Regeneration Paradigm</h3>
+                            <p class="research-subtitle">Ontological Shift from Data Transmission to Synchronous State Discovery</p>
+                        </div>
+
+                        <p class="research-description">
+                            <span class="highlight-primary">Fundamental theoretical work</span> proposing an alternative to
+                            <span class="highlight-muted">classical information transmission</span>, where
+                            <span class="highlight-accent">data is regenerated locally</span> through
+                            <span class="highlight-primary">synchronized computation</span>.
+                        </p>
+
+                        <div class="research-links">
+                            <div class="btn-group btn-group-sm d-flex flex-wrap">
+                                <a target="_blank" href="https://doi.org/10.5281/zenodo.17264327"
+                                   class="btn btn-outline-primary me-1 mb-1">
+                                    <i class="bi bi-journal-text" aria-hidden="true"></i> Paper
+                                </a>
+                                <a target="_blank" href="https://zenodo.org/records/17264327/files/suvorov-the-local-data-regeneration-paradigm.pdf?download=1"
+                                   class="btn btn-outline-primary me-1 mb-1">
+                                    <i class="bi bi-file-pdf" aria-hidden="true"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="citation-tabs-container mt-3">
+                            <div class="citation-format">
+                                <button class="copy-btn" data-text="@misc{suvorov_2025_17264327,
+  author       = {Suvorov, Alexander},
+  title        = {The Local Data Regeneration Paradigm: Ontological
+                   Shift from Data Transmission to Synchronous State
+                   Discovery},
+  month        = oct,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17264327},
+  url          = {https://doi.org/10.5281/zenodo.17264327},
+}">
+                                    <i class="bi bi-clipboard" aria-hidden="true"></i> Copy BibTeX
+                                </button>
+                                <pre class="citation-text">@misc{suvorov_2025_17264327,
+  author       = {Suvorov, Alexander},
+  title        = {The Local Data Regeneration Paradigm: Ontological
+                   Shift from Data Transmission to Synchronous State
+                   Discovery},
+  month        = oct,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17264327},
+  url          = {https://doi.org/10.5281/zenodo.17264327},
+}</pre>
+                            </div>
+                        </div>
+
+                        <div class="research-stats-grid">
+                            <div class="stat-item">
+                                <div class="stats-label">Views</div>
+                                <hr>
+                                <div class="stats-number" id="localdata-views">126/280</div>
+                                <hr>
+                                <div class="stats-label">Unique/Total</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stats-label">Downloads</div>
+                                <hr>
+                                <div class="stats-number" id="localdata-downloads">120/250</div>
+                                <hr>
+                                <div class="stats-label">Unique/Total</div>
+                            </div>
+                        </div>
+
+                        <div class="research-metadata">
+                            <div class="metadata-item">
+                                <span class="metadata-label">DOI:</span>
+                                <span class="metadata-value">10.5281/zenodo.17264327</span>
+                            </div>
+                            <div class="metadata-item">
+                                <span class="metadata-label">Published:</span>
+                                <span class="metadata-value">October 4, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card research-card">
+                    <div class="card-body d-flex flex-column">
+                        <div class="research-header text-center">
+                            <i class="bi bi-cpu paradigm-icon" aria-hidden="true"></i>
+                            <h3>Deterministic Game Engine</h3>
+                            <p class="research-subtitle">Practical Implementation of Security & Regeneration Paradigms</p>
+                        </div>
+
+                        <p class="research-description">
+                            A <span class="highlight-primary">research prototype</span> demonstrating the practical
+                            feasibility of both paradigms through deterministic architecture with
+                            <span class="highlight-primary">O(1) state access</span> and
+                            <span class="highlight-primary">mathematical verification</span>.
+                        </p>
+
+                        <div class="research-links">
+                            <div class="btn-group btn-group-sm d-flex flex-wrap">
+                                <a target="_blank" href="https://doi.org/10.5281/zenodo.17383447"
+                                   class="btn btn-outline-primary me-1 mb-1">
+                                    <i class="bi bi-journal-text" aria-hidden="true"></i> Paper
+                                </a>
+                                <a target="_blank" href="https://zenodo.org/records/17383447/files/suvorov-smart-deterministic-game-engine-report-en.pdf?download=1"
+                                   class="btn btn-outline-primary me-1 mb-1">
+                                    <i class="bi bi-file-pdf" aria-hidden="true"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="citation-tabs-container mt-3">
+                            <div class="citation-format">
+                                <button class="copy-btn" data-text="@misc{suvorov_2025_17383447,
+  author       = {Suvorov, Alexander},
+  title        = {Deterministic Game Engine: Practical
+                   Implementation of Pointer-Based Security and Local
+                   Data Regeneration Paradigms},
+  month        = oct,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17383447},
+  url          = {https://doi.org/10.5281/zenodo.17383447},
+}">
+                                    <i class="bi bi-clipboard" aria-hidden="true"></i> Copy BibTeX
+                                </button>
+                                <pre class="citation-text">@misc{suvorov_2025_17383447,
+  author       = {Suvorov, Alexander},
+  title        = {Deterministic Game Engine: Practical
+                   Implementation of Pointer-Based Security and Local
+                   Data Regeneration Paradigms},
+  month        = oct,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.17383447},
+  url          = {https://doi.org/10.5281/zenodo.17383447},
+}</pre>
+                            </div>
+                        </div>
+
+                        <div class="research-stats-grid">
+                            <div class="stat-item">
+                                <div class="stats-label">Views</div>
+                                <hr>
+                                <div class="stats-number" id="engine-views">43/95</div>
+                                <hr>
+                                <div class="stats-label">Unique/Total</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stats-label">Downloads</div>
+                                <hr>
+                                <div class="stats-number" id="engine-downloads">28/65</div>
+                                <hr>
+                                <div class="stats-label">Unique/Total</div>
+                            </div>
+                        </div>
+
+                        <div class="research-metadata">
+                            <div class="metadata-item">
+                                <span class="metadata-label">DOI:</span>
+                                <span class="metadata-value">10.5281/zenodo.17383447</span>
+                            </div>
+                            <div class="metadata-item">
+                                <span class="metadata-label">Published:</span>
+                                <span class="metadata-value">October 18, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="expertise">
+            <div class="container">
+                <h2 class="section-title">Research Expertise</h2>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 mb-4">
+                        <div class="expertise-card">
+                            <div class="expertise-header">
+                                <i class="bi bi-shield expertise-icon-main" aria-hidden="true"></i>
+                                <h3 class="expertise-title">Security Research</h3>
+                                <p class="expertise-subtitle">Digital Security Architecture</p>
+                            </div>
+                            <div class="expertise-items">
+                                <div class="expertise-item">
+                                    <i class="bi bi-arrow-right expertise-item-icon" aria-hidden="true"></i>
+                                    <div class="expertise-item-content">
+                                        <div class="expertise-item-title">Pointer-Based Security</div>
+                                        <div class="expertise-item-desc">Architectural elimination of vulnerable data existence</div>
+                                    </div>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="bi bi-arrow-right expertise-item-icon" aria-hidden="true"></i>
+                                    <div class="expertise-item-content">
+                                        <div class="expertise-item-title">Zero-Transmission Systems</div>
+                                        <div class="expertise-item-desc">Communication without data transfer</div>
+                                    </div>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="bi bi-arrow-right expertise-item-icon" aria-hidden="true"></i>
+                                    <div class="expertise-item-content">
+                                        <div class="expertise-item-title">Cryptographic Verification</div>
+                                        <div class="expertise-item-desc">Mathematical proof of system integrity</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 mb-4">
+                        <div class="expertise-card">
+                            <div class="expertise-header">
+                                <i class="bi bi-arrow-repeat expertise-icon-main" aria-hidden="true"></i>
+                                <h3 class="expertise-title">Information Theory</h3>
+                                <p class="expertise-subtitle">Data Transmission Alternatives</p>
+                            </div>
+                            <div class="expertise-items">
+                                <div class="expertise-item">
+                                    <i class="bi bi-arrow-right expertise-item-icon" aria-hidden="true"></i>
+                                    <div class="expertise-item-content">
+                                        <div class="expertise-item-title">Local Data Regeneration</div>
+                                        <div class="expertise-item-desc">State discovery through synchronized computation</div>
+                                    </div>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="bi bi-arrow-right expertise-item-icon" aria-hidden="true"></i>
+                                    <div class="expertise-item-content">
+                                        <div class="expertise-item-title">Deterministic Systems</div>
+                                        <div class="expertise-item-desc">Predictable state generation and verification</div>
+                                    </div>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="bi bi-arrow-right expertise-item-icon" aria-hidden="true"></i>
+                                    <div class="expertise-item-content">
+                                        <div class="expertise-item-title">Theoretical Frameworks</div>
+                                        <div class="expertise-item-desc">Formalization of novel communication paradigms</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="publications">
+            <div class="container">
+                <h2 class="section-title">Publications & Platforms</h2>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card research-card h-100">
+                            <div class="card-body">
+                                <h4 class="text-center mb-4"><i class="bi bi-archive" aria-hidden="true"></i> Academic Profiles</h4>
+                                <div class="d-grid gap-2">
+                                    <a target="_blank" href="https://orcid.org/0009-0006-3427-9611"
+                                       class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-person-badge" aria-hidden="true"></i> ORCID Profile
+                                    </a>
+                                    <a target="_blank" href="https://independent.academia.edu/smartlegionlab"
+                                       class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-mortarboard" aria-hidden="true"></i> Academia.edu
+                                    </a>
+                                    <a target="_blank" href="https://zenodo.org/search?q=Alexander%20Suvorov"
+                                       class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-database" aria-hidden="true"></i> Zenodo Publications
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="card research-card h-100">
+                            <div class="card-body">
+                                <h4 class="text-center mb-4"><i class="bi bi-journal-text" aria-hidden="true"></i> Digital Object Identifiers</h4>
+                                <div class="publication-dois">
+                                    <div class="doi-item">
+                                        <strong>Pointer-Based Security:</strong>
+                                        <div class="text-muted small">10.5281/zenodo.17204738</div>
+                                    </div>
+                                    <div class="doi-item mt-2">
+                                        <strong>Local Data Regeneration:</strong>
+                                        <div class="text-muted small">10.5281/zenodo.17264327</div>
+                                    </div>
+                                    <div class="doi-item mt-2">
+                                        <strong>Deterministic Engine:</strong>
+                                        <div class="text-muted small">10.5281/zenodo.17383447</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="contact">
+            <div class="container">
+                <h2 class="section-title text-center">Academic Contact</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="contact-actions text-center">
+                            <div class="contact-buttons-container justify-content-center">
+                                <a target="_blank" href="mailto:smartlegionlab@gmail.com"
+                                   class="contact-btn" aria-label="Send email">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <span>Email</span>
+                                </a>
+                                <a target="_blank" href="https://orcid.org/0009-0006-3427-9611"
+                                   class="contact-btn" aria-label="View ORCID profile">
+                                    <i class="bi bi-person-badge" aria-hidden="true"></i>
+                                    <span>ORCID</span>
+                                </a>
+                                <a target="_blank" href="https://independent.academia.edu/smartlegionlab"
+                                   class="contact-btn" aria-label="View Academia.edu profile">
+                                    <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                                    <span>Academia</span>
+                                </a>
+                            </div>
+
+                            <hr>
+
+                            <p class="lead text-center mb-4 text-light">
+                                For research collaboration, peer review, or academic discussion of
+                                <span class="text-primary">security paradigms</span> and
+                                <span class="text-success">information theory</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/zenodo-cache.js"></script>
+<script src="js/stats-manager.js"></script>
+<script src="js/zenodo-manager.js"></script>
+<script src="js/particle-background.js"></script>
+<script src="js/vertical-progress-nav.js"></script>
+<script src="js/citation-manager.js"></script>
+<script src="js/scroll-manager.js"></script>
+<script src="js/animation-manager.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
