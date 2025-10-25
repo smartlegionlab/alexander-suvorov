@@ -36,12 +36,9 @@ class PortfolioApp {
 
     async loadVisualEffects() {
         this.particleBg = new ParticleBackground();
-
         this.animationManager = new PriorityAnimationManager();
         this.animationManager.initImmediate();
-
         this.setupTimelineHandlers();
-
         console.log('✅ Visual effects loaded');
     }
 

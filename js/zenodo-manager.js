@@ -95,10 +95,6 @@ class ZenodoManager {
         }
     }
 
-    showCacheWarning(isExpired) {
-        console.log(`ℹ️ Using ${isExpired ? 'expired' : 'cached'} Zenodo data`);
-    }
-
     async forceRefresh() {
         if (this.isLoading) return;
 

@@ -5,10 +5,6 @@ class PriorityAnimationManager {
 
     initImmediate() {
         this.initScrollAnimations();
-        this.initAvatarAnimation();
-    }
-
-    initLazy() {
     }
 
     initScrollAnimations() {
@@ -28,12 +24,5 @@ class PriorityAnimationManager {
         document.querySelectorAll('.content-section').forEach(section => {
             observer.observe(section);
         });
-    }
-
-    initAvatarAnimation() {
-        const avatar = document.querySelector('.profile-avatar');
-        if (avatar) {
-
-        }
     }
 }
