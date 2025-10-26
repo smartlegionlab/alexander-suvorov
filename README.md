@@ -1,6 +1,6 @@
 # 🔬 Alexander Suvorov - Academic Research Portfolio
 
-**Research Website**: [alexander-suvorov.ru](https://alexander-suvorov.ru)  
+**Academic Portfolio**: [alexander-suvorov.ru](https://alexander-suvorov.ru)  
 **Technical Portfolio**: [smartlegionlab.ru](https://smartlegionlab.ru)
 
 ## 🎯 About the Project
@@ -89,7 +89,7 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 
 ## Version
 
-`v1.0.0` - Academic Research Portfolio
+`v1.0.4` - Academic Research Portfolio
 
 ## Research Focus Areas
 
