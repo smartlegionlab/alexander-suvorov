@@ -14,22 +14,22 @@ const CONFIG = {
     COUNTERS: {
         RESEARCH_STATS: {
             pointerParadigm: {
-                unique_views: 211,
-                unique_downloads: 193,
-                total_views: 400,
-                total_downloads: 420
+                unique_views: 218,
+                unique_downloads: 200,
+                total_views: 410,
+                total_downloads: 431
             },
             localDataParadigm: {
-                unique_views: 129,
-                unique_downloads: 121,
-                total_views: 197,
-                total_downloads: 211
+                unique_views: 134,
+                unique_downloads: 128,
+                total_views: 205,
+                total_downloads: 222
             },
             deterministicEngine: {
-                unique_views: 45,
-                unique_downloads: 29,
-                total_views: 79,
-                total_downloads: 75
+                unique_views: 51,
+                unique_downloads: 37,
+                total_views: 87,
+                total_downloads: 85
             }
         }
     }

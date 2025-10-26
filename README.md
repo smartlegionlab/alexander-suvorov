@@ -87,7 +87,7 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 
 ## Version
 
-`v1.1.2` - Academic Research Portfolio
+`v1.1.3` - Academic Research Portfolio
 
 ## Research Focus Areas
 
