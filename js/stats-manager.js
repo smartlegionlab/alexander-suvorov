@@ -45,11 +45,9 @@ class StatsManager {
 
         const headerDownloads = document.getElementById('header-downloads');
         const headerViews = document.getElementById('header-views');
-        const headerTotal = document.getElementById('header-monthly');
 
         if (headerDownloads) headerDownloads.innerHTML = `${totalUniqueDownloads}+`;
         if (headerViews) headerViews.innerHTML = `${totalUniqueViews}+`;
-        if (headerTotal) headerTotal.innerHTML = `${totalUniqueDownloads + totalUniqueViews}+`;
     }
 
     updateMetricsStats(stats) {
