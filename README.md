@@ -12,7 +12,7 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 ### 🎨 Academic Design
 - **Dark academic theme** with professional typography
 - **Research-focused layout** emphasizing publications
-- **Citation system** with BibTeX, APA, MLA formats
+- **Citation system** with BibTeX
 - **DOI integration** for all publications
 - **Academic metrics** with live statistics
 
