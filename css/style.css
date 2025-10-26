@@ -8,7 +8,6 @@
     --border: #30363d;
 }
 
-/* Base Styles */
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -67,7 +66,6 @@ body {
     box-shadow: 0 8px 25px rgba(13, 110, 253, 0.6);
 }
 
-/* Layout Components */
 .container {
     position: relative;
     z-index: 1;
@@ -126,7 +124,6 @@ body {
     background: var(--accent);
 }
 
-/* Header Styles */
 .professional-header {
     background: linear-gradient(135deg, var(--primary) 0%, #0a0e14 100%);
     color: white;
@@ -336,7 +333,6 @@ body {
     font-size: 1rem;
 }
 
-/* Card Components */
 .card {
     background: var(--primary);
     border: 1px solid var(--border);
@@ -393,7 +389,6 @@ body {
     border-color: var(--accent-dark);
 }
 
-/* Research Components */
 .research-header {
     border-bottom: 1px solid var(--border);
     padding-bottom: 1rem;
@@ -482,7 +477,6 @@ body {
     font-family: monospace;
 }
 
-/* About Section */
 .about-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -549,7 +543,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Expertise Section */
 .expertise-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -618,7 +611,6 @@ body {
     line-height: 1.4;
 }
 
-/* Publications Section */
 .publication-dois {
     display: flex;
     flex-direction: column;
@@ -632,7 +624,6 @@ body {
     border-radius: 8px;
 }
 
-/* Contact Section */
 .contact-actions {
     text-align: center;
 }
@@ -670,7 +661,6 @@ body {
     color: white;
 }
 
-/* Citation Styles */
 .citation-tabs-container {
     margin-top: 1rem;
 }
@@ -738,7 +728,6 @@ body {
     background: var(--accent-dark);
 }
 
-/* Button Styles */
 .btn-outline-primary {
     border-color: var(--accent);
     color: var(--accent);
@@ -754,7 +743,6 @@ body {
     gap: 0.5rem;
 }
 
-/* Text Utilities */
 .text-muted {
     color: var(--text-muted) !important;
 }
@@ -898,7 +886,6 @@ body {
     transform: translateY(-50%) translateX(-5px);
 }
 
-/* Animations */
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
@@ -915,11 +902,9 @@ body {
 .stagger-delay:nth-child(3) { transition-delay: 0.3s; }
 .stagger-delay:nth-child(4) { transition-delay: 0.4s; }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 1024px), (max-height: 600px) {
     .vertical-progress-nav {
-        height: 85vh;
-        min-height: 550px;
+        display: none;
     }
 }
 
