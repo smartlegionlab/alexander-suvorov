@@ -21,7 +21,6 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 - **Local Data Regeneration Paradigm** - Information theory innovation
 - **Deterministic Game Engine** - Practical implementation
 - **Zenodo integration** for publication statistics
-- **Academic profiles** (ORCID, Academia.edu)
 - **Real-time research metrics** (downloads, views)
 
 ### 📊 Live Metrics
@@ -69,7 +68,6 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 
 - **Zenodo**: Research publications with DOI
 - **ORCID**: Academic researcher profile
-- **Academia.edu**: Research dissemination platform
 - **GitHub**: Research code and prototypes
 - **Live Metrics**: Real-time download and view statistics
 
