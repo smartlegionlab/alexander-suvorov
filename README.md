@@ -85,10 +85,6 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 
 ---
 
-## Version
-
-`v1.1.3` - Academic Research Portfolio
-
 ## Research Focus Areas
 
 - **Digital Security Architecture**
