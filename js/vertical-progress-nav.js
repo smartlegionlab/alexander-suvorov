@@ -90,7 +90,7 @@ class VerticalProgressNav {
         } else {
             for (let i = 0; i < this.sections.length; i++) {
                 const section = this.sections[i];
-                const sectionTop = section.offsetTop - CONFIG.SCROLL_OFFSET;
+                const sectionTop = section.offsetTop;
 
                 if (scrollTop >= sectionTop && scrollTop < sectionTop + section.offsetHeight) {
                     activeSection = section.id;
@@ -109,7 +109,7 @@ class VerticalProgressNav {
 
             if (!section) return;
 
-            const sectionTop = section.offsetTop - CONFIG.SCROLL_OFFSET;
+            const sectionTop = section.offsetTop;
             const sectionProgress = totalScrollable > 0 ? (Math.max(sectionTop, 0) / totalScrollable) * 100 : 0;
             const currentProgress = totalScrollable > 0 ? (scrollTop / totalScrollable) * 100 : 0;
 
@@ -131,13 +131,12 @@ class VerticalProgressNav {
     }
 
     scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            const offsetTop = section.offsetTop - CONFIG.SCROLL_OFFSET;
-            window.scrollTo({
-                top: Math.max(offsetTop, 0),
-                behavior: 'smooth'
-            });
-        }
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
+}
 }

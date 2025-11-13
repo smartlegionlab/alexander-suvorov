@@ -791,7 +791,6 @@ body {
     text-decoration: underline;
 }
 
-/* Vertical Progress Navigation */
 .vertical-progress-nav {
     position: fixed;
     right: 30px;
@@ -1107,10 +1106,6 @@ body {
     .vertical-progress-nav {
         display: none !important;
     }
-}
-
-.content-section, .professional-header {
-    scroll-margin-top: 80px;
 }
 
 hr {

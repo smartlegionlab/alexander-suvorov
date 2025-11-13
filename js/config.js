@@ -9,8 +9,6 @@ const CONFIG = {
         CACHE_KEY: 'zenodo_stats_cache'
     },
 
-    SCROLL_OFFSET: 80,
-
     COUNTERS: {
         RESEARCH_STATS: {
             pointerParadigm: {
