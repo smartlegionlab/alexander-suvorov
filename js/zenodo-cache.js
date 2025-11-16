@@ -25,6 +25,12 @@ class ZenodoCache {
                         unique_downloads: stats.deterministicEngine.unique_downloads,
                         total_views: stats.deterministicEngine.total_views,
                         total_downloads: stats.deterministicEngine.total_downloads
+                    },
+                    pchParadigm: {
+                        unique_views: stats.pchParadigm.unique_views,
+                        unique_downloads: stats.pchParadigm.unique_downloads,
+                        total_views: stats.pchParadigm.total_views,
+                        total_downloads: stats.pchParadigm.total_downloads
                     }
                 },
                 timestamp: Date.now()

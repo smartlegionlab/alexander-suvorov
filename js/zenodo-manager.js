@@ -34,16 +34,18 @@ class ZenodoManager {
         console.log('📡 Fetching Zenodo statistics...');
 
         try {
-            const [pointerStats, localDataStats, engineStats] = await Promise.all([
+            const [pointerStats, localDataStats, engineStats, pchStats] = await Promise.all([
                 this.fetchRecordStats(CONFIG.ZENODO.RECORDS.POINTER_PARADIGM),
                 this.fetchRecordStats(CONFIG.ZENODO.RECORDS.LOCAL_DATA_PARADIGM),
-                this.fetchRecordStats(CONFIG.ZENODO.RECORDS.DETERMINISTIC_ENGINE)
+                this.fetchRecordStats(CONFIG.ZENODO.RECORDS.DETERMINISTIC_ENGINE),
+                this.fetchRecordStats(CONFIG.ZENODO.RECORDS.PCH_PARADIGM)
             ]);
 
             const stats = {
                 pointerParadigm: pointerStats,
                 localDataParadigm: localDataStats,
-                deterministicEngine: engineStats
+                deterministicEngine: engineStats,
+                pchParadigm: pchStats
             };
 
             console.log('✅ Zenodo stats fetched successfully');
