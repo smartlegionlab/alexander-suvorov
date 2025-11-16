@@ -18,6 +18,7 @@ class StatsManager {
         this.updateParadigmStats('pointer', stats.pointerParadigm);
         this.updateParadigmStats('localdata', stats.localDataParadigm);
         this.updateParadigmStats('engine', stats.deterministicEngine);
+        this.updateParadigmStats('pch', stats.pchParadigm);
         this.updateHeaderStats(stats);
         this.updateMetricsStats(stats);
     }
