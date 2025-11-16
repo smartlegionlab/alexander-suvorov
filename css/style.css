@@ -1119,7 +1119,7 @@ hr:last-of-type {
 }
 
 .paradigms-evolution-section {
-    margin-top: 4rem;
+    margin: 4rem 1rem 0 1rem;
     padding-top: 3rem;
     border-top: 1px solid var(--border);
 }
