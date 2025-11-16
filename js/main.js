@@ -23,7 +23,6 @@ class PortfolioApp {
         this.scrollManager = new ScrollManager();
         this.scrollManager.init();
 
-        this.progressNav = new VerticalProgressNav();
         this.citationManager = new CitationManager();
         this.statsManager = new StatsManager();
         this.zenodoManager = new ZenodoManager(this.statsManager);
