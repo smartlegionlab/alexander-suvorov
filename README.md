@@ -12,23 +12,23 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 ### 🎨 Academic Design
 - **Dark academic theme** with professional typography
 - **Research-focused layout** emphasizing publications
-- **Citation system** with BibTeX
 - **DOI integration** for all publications
 - **Academic metrics** with live statistics
 
 ### 🔬 Research Content
 - **Pointer-Based Security Paradigm** - Architectural security transformation
 - **Local Data Regeneration Paradigm** - Information theory innovation
-- **Deterministic Game Engine** - Practical implementation
+- **Deterministic Game Engine Report** - Practical implementation
 - **Zenodo integration** for publication statistics
 - **Real-time research metrics** (downloads, views)
 
 ### 📊 Live Metrics
-- **350+ unique paper downloads**
-- **374+ unique paper views**
-- **750+ total engagements**
-- **3 research publications**
-- **2 published paradigms**
+- **500+ unique paper downloads**
+- **1000+ paper downloads**
+- **500+ unique paper views**
+- **1000+ unique paper views**
+- **4 research publications**
+- **3 published paradigms**
 
 ### 🛠 Technology Stack
 - **HTML5** with semantic academic markup
@@ -44,25 +44,29 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 2. **Research Paradigms** - Detailed presentation of published work
 3. **Paradigms Evolution** - Theoretical development timelines
 4. **Research Expertise** - Specialized knowledge areas
-5. **Publications & Platforms** - Academic profiles and DOIs
-6. **Academic Contact** - Research collaboration channels
+5. **Academic Contact** - Research collaboration channels
 
 ## 🔬 Key Publications
 
 ### Pointer-Based Security Paradigm
 - **DOI**: 10.5281/zenodo.17204738
 - **Concept**: Architectural shift from data protection to data non-existence
-- **Stats**: 205 unique views, 192 unique downloads
+- **Stats**: 250+ unique views, 250+ unique downloads
 
 ### Local Data Regeneration Paradigm
 - **DOI**: 10.5281/zenodo.17264327
 - **Concept**: Ontological shift from data transmission to synchronous state discovery
-- **Stats**: 126 unique views, 120 unique downloads
+- **Stats**: 150+ unique views, 150+ unique downloads
 
-### Deterministic Game Engine
+### Deterministic Game Engine Report
 - **DOI**: 10.5281/zenodo.17383447
 - **Concept**: Practical implementation validating both paradigms
-- **Stats**: 43 unique views, 28 unique downloads
+- **Stats**: 75+ unique views, 75+ unique downloads
+
+### Position-Candidate-Hypothesis (PCH)
+- **DOI**: 10.5281/zenodo.17614888
+- **Concept**: A Structural-Statistical Approach to NP-Complete Problems
+- **Stats**: 50+ unique views, 30+ unique downloads
 
 ## 🚀 Academic Integrations
 
@@ -74,7 +78,6 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 ## 🎨 Unique Elements
 
 - **Paradigm Evolution Timelines** with interactive animation
-- **Citation Management System** with one-click copying
 - **Academic Metrics Dashboard** with live statistics
 - **Research Validation Framework** showing practical implementation
 - **Professional Academic Design** tailored for research audience
@@ -94,6 +97,7 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 - **Digital Security Architecture**
 - **Information Theory**
 - **Theoretical Computer Science**
+- **Structural Decomposition**
 - **Paradigm Development**
 - **Academic Publishing**
 - **Research Validation**
