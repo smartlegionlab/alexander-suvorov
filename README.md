@@ -83,6 +83,10 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 
 ![Academic Portfolio](https://github.com/smartlegionlab/alexander-suvorov/blob/master/images/academic_portfolio.png)
 
+![Mobile Page Speed Insights](https://github.com/smartlegionlab/alexander-suvorov/blob/master/images/mobile.png)
+
+![PC Page Speed Insights](https://github.com/smartlegionlab/alexander-suvorov/blob/master/images/pc.png)
+
 ---
 
 ## Research Focus Areas
