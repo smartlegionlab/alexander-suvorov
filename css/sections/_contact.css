@@ -1,0 +1,12 @@
+.publication-dois {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.doi-item {
+    padding: 1rem;
+    background: rgba(13, 110, 253, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}

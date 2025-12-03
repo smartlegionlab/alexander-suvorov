@@ -1,0 +1,51 @@
+.btn-outline-primary {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline-primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+.btn-group {
+    gap: 0.5rem;
+}
+
+.contact-actions {
+    text-align: center;
+}
+
+.contact-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.contact-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+    color: white;
+}

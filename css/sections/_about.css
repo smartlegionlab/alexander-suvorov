@@ -1,0 +1,65 @@
+.about-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.profile-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.metrics-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(13, 110, 253, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+    background: rgba(13, 110, 253, 0.1);
+    transform: translateX(5px);
+    border-color: var(--accent);
+}
+
+.metric-icon-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.metric-content {
+    flex: 1;
+}
+
+.metric-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

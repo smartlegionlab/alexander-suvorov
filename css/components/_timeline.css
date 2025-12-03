@@ -1,0 +1,98 @@
+.paradigms-evolution-section {
+    margin: 4rem 1rem 0 1rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+}
+
+.evolution-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.evolution-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.evolution-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.evolution-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.paradigm-timeline {
+    border-left: 3px solid var(--accent);
+    padding-left: 1.8rem;
+    position: relative;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+}
+
+.paradigm-timeline::before {
+    content: '';
+    position: absolute;
+    left: -1.5px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    z-index: 1;
+}
+
+.timeline-container {
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    opacity: 0.3;
+    transform: translateX(-15px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.35rem;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 3px solid var(--secondary);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.timeline-item.active .timeline-marker {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.2);
+    transform: scale(1.2);
+}
+
+.timeline-content h5 {
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.timeline-content p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}

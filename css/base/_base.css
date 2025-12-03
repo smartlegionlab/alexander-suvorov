@@ -1,0 +1,37 @@
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #000408;
+    color: var(--text-light);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.paper-container {
+    background: var(--secondary);
+    border-radius: 20px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 1px 3px rgba(255, 255, 255, 0.1) inset;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    opacity: 0.90;
+}
+
+.paper-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.02);
+    pointer-events: none;
+}

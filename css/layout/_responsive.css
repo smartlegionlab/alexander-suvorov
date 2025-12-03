@@ -1,0 +1,380 @@
+@media (max-width: 1024px) {
+    .stats-row {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .stat {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stat-number {
+        margin-bottom: 0;
+        min-width: 120px;
+    }
+
+    .stat-label {
+        text-align: right;
+        flex: 1;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .name {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .professional-header {
+        padding: 2rem 0;
+    }
+
+    .main-profile-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .stats-row {
+        padding: 1.25rem;
+        gap: 0.6rem;
+    }
+
+    .stat {
+        padding: 0.8rem;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+        min-width: 110px;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .navigation {
+        gap: 0.25rem;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        min-width: auto;
+        flex: 1;
+    }
+
+    .nav-btn span {
+        display: none;
+    }
+
+    .nav-btn i {
+        font-size: 1.1rem;
+    }
+    
+    .scroll-to-top {
+        right: 30px;
+        bottom: 30px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .contact-buttons-container {
+        gap: 0.6rem;
+    }
+
+    .contact-btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    #contact .btn-group {
+        gap: 0.5rem;
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .contact-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    #contact .lead {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .enhanced-header {
+        padding: 80px 0 40px 0;
+    }
+    
+    .enhanced-name {
+        font-size: 2.2rem;
+    }
+    
+    .enhanced-title {
+        font-size: 1.1rem;
+    }
+    
+    .enhanced-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .enhanced-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .enhanced-stat-number {
+        font-size: 1.5rem;
+    }
+
+    .paradigms-evolution-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+
+    .evolution-card {
+        padding: 1.5rem;
+    }
+
+    .paradigm-timeline {
+        padding-left: 1.5rem;
+        margin-left: 0.25rem;
+    }
+
+    .timeline-marker {
+        left: -2.1rem;
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav-container {
+        gap: 0;
+    }
+    
+    .mobile-nav-btn {
+        padding: 3px 5px;
+        max-width: 55px;
+        min-height: 35px;
+    }
+    
+    .mobile-nav-btn i {
+        font-size: 1.1rem;
+    }
+    
+    .mobile-nav-btn span {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .badges {
+        justify-content: center;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .stats-row {
+        padding: 1rem;
+    }
+
+    .stat {
+        padding: 0.7rem;
+    }
+
+    .stat-number {
+        font-size: 1.1rem;
+        min-width: 100px;
+    }
+
+    .contact-btn {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    #contact .section-title {
+        font-size: 1.5rem;
+    }
+
+    .enhanced-name {
+        font-size: 1.8rem;
+    }
+    
+    .enhanced-badges {
+        gap: 0.5rem;
+    }
+    
+    .enhanced-badge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .mobile-navigation {
+        padding: 6px 10px;
+    }
+    
+    .mobile-nav-container {
+        gap: 0;
+    }
+    
+    .mobile-nav-btn {
+        padding: 3px 5px;
+        max-width: 55px;
+        min-height: 35px;
+        margin: 0 2px;
+    }
+    
+    .mobile-nav-btn i {
+        font-size: 1rem;
+        margin-bottom: 1px;
+    }
+    
+    .mobile-nav-btn span {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-nav-btn {
+        padding: 3px 5px;
+        max-width: 55px;
+        min-height: 35px;
+    }
+    
+    .mobile-nav-btn i {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+    
+    .mobile-nav-btn span {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .mobile-navigation {
+        padding: 5px 8px;
+    }
+    
+    .mobile-nav-container {
+        gap: 0;
+    }
+    
+    .mobile-nav-btn {
+        padding: 3px 5px;
+        max-width: 55px;
+        min-height: 35px;
+        border-radius: 6px;
+        margin: 0 1px;
+    }
+    
+    .mobile-nav-btn i {
+        font-size: 0.9rem;
+    }
+    
+    .mobile-nav-btn span {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mobile-nav-container {
+        max-width: 650px;
+        gap: 0;
+    }
+    
+    .mobile-nav-btn {
+        padding: 3px 5px;
+        max-width: 55px;
+        min-height: 35px;
+    }
+    
+    .mobile-nav-btn i {
+        font-size: 1.2rem;
+    }
+    
+    .mobile-nav-btn span {
+        font-size: 0.65rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .mobile-nav-container {
+        max-width: 550px;
+        gap: 0;
+    }
+    
+    .mobile-nav-btn {
+        padding: 3px 5px;
+        max-width: 55px;
+        min-height: 35px;
+    }
+    
+    .mobile-nav-btn i {
+        font-size: 1.15rem;
+    }
+    
+    .mobile-nav-btn span {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .paradigms-evolution-section .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .evolution-card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .mobile-nav-btn::after,
+    .mobile-nav-btn::before {
+        display: none !important;
+    }
+}

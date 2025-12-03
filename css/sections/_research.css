@@ -1,0 +1,164 @@
+.research-header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.paradigm-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.research-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.research-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.research-description {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.research-links {
+    margin-bottom: 1.5rem;
+}
+
+.research-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(13, 110, 253, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.stats-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.stats-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.research-metadata {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.metadata-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.metadata-label {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.metadata-value {
+    color: var(--text-light);
+    font-family: monospace;
+}
+
+.abstract-section {
+    background: rgba(13, 110, 253, 0.1);
+    border: 1px solid var(--accent);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 8px;
+}
+
+.citation-tabs-container {
+    margin-top: 1rem;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-muted);
+    border: 1px solid transparent;
+    border-radius: 10px 10px 0 0;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+    border-bottom-color: var(--accent);
+    border-radius: 10px 10px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--text-light);
+    border-color: var(--border);
+}
+
+.citation-format {
+    background: rgba(13, 110, 253, 0.1);
+    border: 1px solid var(--accent);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 8px;
+}
+
+.citation-text {
+    color: white;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.copy-btn {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: var(--accent-dark);
+}

@@ -1,0 +1,70 @@
+.content-section {
+    padding: 60px 0;
+}
+
+.content-section:nth-child(even) {
+    background: rgba(13, 17, 23, 0.5);
+}
+
+.section-title {
+    color: var(--text-light);
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.additional-info-section {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    margin: 1.5rem 0;
+}
+
+.info-item {
+    background: rgba(13, 110, 253, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.info-item:hover {
+    background: rgba(13, 110, 253, 0.1);
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+.research-proposition {
+    background: rgba(13, 110, 253, 0.1) !important;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+}
+
+.info-item h6 {
+    color: var(--text-light);
+    font-weight: 600;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-item code {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+}

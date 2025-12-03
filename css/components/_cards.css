@@ -1,0 +1,71 @@
+.card {
+    background: var(--primary);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+}
+
+.research-card {
+    background: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--accent);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(13, 110, 253, 0.2);
+    border-color: var(--accent-dark);
+}
+
+.about-card {
+    background: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent);
+}
+
+.about-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15);
+    border-color: var(--accent-dark);
+}
+
+.expertise-card {
+    background: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent);
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(13, 110, 253, 0.2);
+    border-color: var(--accent-dark);
+}
+
+.evolution-card {
+    background: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent);
+}
+
+.evolution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(13, 110, 253, 0.2);
+    border-color: var(--accent-dark);
+}
