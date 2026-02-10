@@ -51,22 +51,22 @@ Academic research portfolio showcasing Alexander Suvorov's groundbreaking work i
 ### Pointer-Based Security Paradigm
 - **DOI**: 10.5281/zenodo.17204738
 - **Concept**: Architectural shift from data protection to data non-existence
-- **Stats**: 250+ unique views, 250+ unique downloads
+- **Stats**: 350+ unique views, 300+ unique downloads
 
 ### Local Data Regeneration Paradigm
 - **DOI**: 10.5281/zenodo.17264327
 - **Concept**: Ontological shift from data transmission to synchronous state discovery
-- **Stats**: 150+ unique views, 150+ unique downloads
+- **Stats**: 250+ unique views, 250+ unique downloads
 
 ### Deterministic Game Engine Report
 - **DOI**: 10.5281/zenodo.17383447
 - **Concept**: Practical implementation validating both paradigms
-- **Stats**: 75+ unique views, 75+ unique downloads
+- **Stats**: 150+ unique views, 150+ unique downloads
 
 ### Position-Candidate-Hypothesis (PCH)
 - **DOI**: 10.5281/zenodo.17614888
 - **Concept**: A Structural-Statistical Approach to NP-Complete Problems
-- **Stats**: 50+ unique views, 30+ unique downloads
+- **Stats**: 80+ unique views, 80+ unique downloads
 
 ## 🚀 Academic Integrations
 
