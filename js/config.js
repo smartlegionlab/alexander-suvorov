@@ -5,36 +5,34 @@ const CONFIG = {
             LOCAL_DATA_PARADIGM: '17264327',
             DETERMINISTIC_ENGINE: '17383447',
             PCH_PARADIGM: '17614888'
-        },
-        CACHE_TTL: 60 * 60 * 1000,
-        CACHE_KEY: 'zenodo_stats_cache'
+        }
     },
 
     COUNTERS: {
         RESEARCH_STATS: {
             pointerParadigm: {
-                unique_views: 329,
-                unique_downloads: 300,
-                total_views: 543,
-                total_downloads: 586
+                unique_views: 359,
+                unique_downloads: 308,
+                total_views: 573,
+                total_downloads: 597
             },
             localDataParadigm: {
-                unique_views: 232,
-                unique_downloads: 212,
-                total_views: 314,
-                total_downloads: 337
+                unique_views: 266,
+                unique_downloads: 222,
+                total_views: 348,
+                total_downloads: 348
             },
             deterministicEngine: {
-                unique_views: 146,
-                unique_downloads: 126,
-                total_views: 198,
-                total_downloads: 216
+                unique_views: 180,
+                unique_downloads: 131,
+                total_views: 232,
+                total_downloads: 223
             },
             pchParadigm: {
-                unique_views: 82,
-                unique_downloads: 83,
-                total_views: 106,
-                total_downloads: 137
+                unique_views: 97,
+                unique_downloads: 89,
+                total_views: 121,
+                total_downloads: 144
             }
         }
     },

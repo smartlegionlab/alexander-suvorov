@@ -1,26 +1,50 @@
 class StatsManager {
     constructor() {
-        this.initializeFromCacheOrConfig();
+        this.loadFromFile();
     }
 
-    initializeFromCacheOrConfig() {
-        const cachedStats = ZenodoCache.getCachedStats();
-        if (cachedStats) {
-            console.log('📦 StatsManager: Initializing from Zenodo cache');
-            this.updateAllStats(cachedStats);
-        } else {
-            console.log('⚡ StatsManager: Initializing from config');
+    async loadFromFile() {
+        try {
+            const response = await fetch('/data/zenodo.json');
+            if (response.ok) {
+                const stats = await response.json();
+                console.log('📡 Loaded Zenodo stats from file');
+                this.updateAllStats(stats);
+            } else {
+                console.log('⚡ Using config values (file not found)');
+                this.updateAllStats(CONFIG.COUNTERS.RESEARCH_STATS);
+            }
+        } catch (error) {
+            console.log('⚡ Using config values (error loading file)');
             this.updateAllStats(CONFIG.COUNTERS.RESEARCH_STATS);
         }
     }
 
     updateAllStats(stats) {
-        this.updateParadigmStats('pointer', stats.pointerParadigm);
-        this.updateParadigmStats('localdata', stats.localDataParadigm);
-        this.updateParadigmStats('engine', stats.deterministicEngine);
-        this.updateParadigmStats('pch', stats.pchParadigm);
-        this.updateHeaderStats(stats);
-        this.updateMetricsStats(stats);
+        const mergedStats = {
+            pointerParadigm: this.mergeWithConfig(stats.pointerParadigm, CONFIG.COUNTERS.RESEARCH_STATS.pointerParadigm),
+            localDataParadigm: this.mergeWithConfig(stats.localDataParadigm, CONFIG.COUNTERS.RESEARCH_STATS.localDataParadigm),
+            deterministicEngine: this.mergeWithConfig(stats.deterministicEngine, CONFIG.COUNTERS.RESEARCH_STATS.deterministicEngine),
+            pchParadigm: this.mergeWithConfig(stats.pchParadigm, CONFIG.COUNTERS.RESEARCH_STATS.pchParadigm)
+        };
+
+        this.updateParadigmStats('pointer', mergedStats.pointerParadigm);
+        this.updateParadigmStats('localdata', mergedStats.localDataParadigm);
+        this.updateParadigmStats('engine', mergedStats.deterministicEngine);
+        this.updateParadigmStats('pch', mergedStats.pchParadigm);
+        this.updateHeaderStats(mergedStats);
+        this.updateMetricsStats(mergedStats);
+    }
+
+    mergeWithConfig(fileStats, configStats) {
+        if (!fileStats) return configStats;
+        
+        return {
+            unique_views: fileStats.unique_views || configStats.unique_views,
+            unique_downloads: fileStats.unique_downloads || configStats.unique_downloads,
+            total_views: fileStats.total_views || configStats.total_views,
+            total_downloads: fileStats.total_downloads || configStats.total_downloads
+        };
     }
 
     updateParadigmStats(prefix, stats) {
@@ -91,10 +115,5 @@ class StatsManager {
         if (totalMetricViews) totalMetricViews.innerHTML = `${totalViews}+`;
         if (metricProjects) metricProjects.innerHTML = `${CONFIG.METRICS_COUNTERS.metricProjects}+`;
         if (metricParadigms) metricParadigms.innerHTML = `${CONFIG.METRICS_COUNTERS.metricParadigms}+`;
-    }
-
-    updateFromZenodo(stats) {
-        console.log('🔄 StatsManager: Updating from Zenodo data');
-        this.updateAllStats(stats);
     }
 }

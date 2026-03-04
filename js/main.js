@@ -1,6 +1,7 @@
 class PortfolioApp {
     constructor() {
         this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        this.statsManager = new StatsManager();
     }
 
     async init() {
@@ -22,14 +23,6 @@ class PortfolioApp {
     async loadCoreFunctionality() {
         this.scrollManager = new ScrollManager();
         this.scrollManager.init();
-
-        this.statsManager = new StatsManager();
-        this.zenodoManager = new ZenodoManager(this.statsManager);
-
-        setTimeout(() => {
-            this.zenodoManager.loadStats();
-        }, 1000);
-
         console.log('✅ Core academic functionality loaded');
     }
 
