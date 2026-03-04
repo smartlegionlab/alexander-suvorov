@@ -167,8 +167,6 @@ To force update Zenodo statistics:
 ## 📸 Performance Metrics
 
 ![Academic Portfolio](https://github.com/smartlegionlab/alexander-suvorov/blob/master/data/images/portfolio.png)
-![Mobile Page Speed Insights](https://github.com/smartlegionlab/alexander-suvorov/blob/master/data/images/mobile.png)
-![PC Page Speed Insights](https://github.com/smartlegionlab/alexander-suvorov/blob/master/images/data/pc.png)
 
 ---
 
