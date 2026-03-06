@@ -1,8 +1,8 @@
 {
   "pointerParadigm": {
-    "unique_views": 364,
+    "unique_views": 367,
     "unique_downloads": 309,
-    "total_views": 578,
+    "total_views": 581,
     "total_downloads": 598
   },
   "localDataParadigm": {
@@ -12,9 +12,9 @@
     "total_downloads": 350
   },
   "deterministicEngine": {
-    "unique_views": 181,
+    "unique_views": 182,
     "unique_downloads": 132,
-    "total_views": 233,
+    "total_views": 234,
     "total_downloads": 224
   },
   "pchParadigm": {
