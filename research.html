@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Paradigms - Alexander Suvorov</title>
+    <meta name="description" content="Research and paradigms by Alexander Suvorov: Pointer-Based Security, Local Data Regeneration, Deterministic Game Engine, and Position-Candidate-Hypothesis (PCH).">
+    <meta name="author" content="Alexander Suvorov">
+    <meta name="copyright" content="Alexander Suvorov">
+
+    <link rel="canonical" href="https://alexander-suvorov.ru/research.html">
+    <link rel="author" href="https://orcid.org/0009-0006-3427-9611">
+
+    <meta property="og:title" content="Research & Paradigms - Alexander Suvorov">
+    <meta property="og:description" content="Pointer-Based Security, Local Data Regeneration, Deterministic Game Engine, and Position-Candidate-Hypothesis (PCH) paradigms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexander-suvorov.ru/research.html">
+    <meta property="og:site_name" content="Alexander Suvorov - Research">
+
+    <meta name="theme-color" content="#0d1117">
+
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap_icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%230d6efd'/><stop offset='100%' stop-color='%230b5ed7'/></linearGradient></defs><path d='M50 15 L20 30 L20 45 C20 65 35 85 50 90 C65 85 80 65 80 45 L80 30 Z' fill='url(%23grad)' stroke='%23ffffff' stroke-width='2'/><path d='M45 55 L35 45 L40 40 L45 45 L60 30 L65 35 Z' fill='%23ffffff'/></svg>">
+</head>
+<body role="document">
+
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="bi bi-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="container">
+        <div class="paper-container">
+
+            <header class="enhanced-header" id="hero">
+                <div class="header-glow glow-1"></div>
+                <div class="header-glow glow-2"></div>
+                <div class="container">
+                    <div class="enhanced-profile" style="padding-bottom: 20px;">
+                        <div class="enhanced-avatar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" class="bi bi-incognito text-white" viewBox="0 0 16 16" aria-hidden="true">
+                                <path fill-rule="evenodd" d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205l-.014-.058-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5s-1.411-.136-2.025-.267c-.541-.115-1.093.2-1.239.735m.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a30 30 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274M3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5m-1.5.5q.001-.264.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085q.084.236.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5" />
+                            </svg>
+                        </div>
+                        <h1 class="enhanced-name">Alexander Suvorov</h1>
+                        <p class="enhanced-title">Independent Researcher | Paradigms Author</p>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="mobile-navigation" id="mobileNav">
+                <div class="mobile-nav-container">
+                    <a href="/" class="mobile-nav-btn" aria-label="Home">
+                        <i class="bi bi-house" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="about.html" class="mobile-nav-btn" aria-label="About & Contacts">
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="research.html" class="mobile-nav-btn active" aria-label="Research">
+                        <i class="bi bi-journal-text" aria-hidden="true"></i>
+                        <span>Research</span>
+                    </a>
+                    <a href="expertise.html" class="mobile-nav-btn" aria-label="Expertise">
+                        <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                        <span>Expertise</span>
+                    </a>
+                </div>
+            </nav>
+
+            <main style="padding: 5px;">
+                <br>
+                <div class="description-item">
+                    <p class="text-center" style="font-size: 20px; color: rgb(207, 198, 198);">Research and paradigms by Alexander Suvorov</p>
+                </div>
+
+                <div class="content-section" id="research">
+                    <div class="container">
+                        <h2 class="section-title">Research & Paradigms</h2>
+
+                        <div class="card research-card mb-5">
+                            <div class="card-body d-flex flex-column">
+                                <div class="research-header text-center"><i class="bi bi-shield-check paradigm-icon" aria-hidden="true"></i><h3>Pointer-Based Security <sup class="text-warning">Paradigm</sup></h3><p class="research-subtitle">Architectural Transition from Data Protection to No Vulnerable Data</p></div>
+                                <div class="research-links"><div class="btn-group btn-group-sm d-flex flex-wrap"><a target="_blank" href="https://doi.org/10.5281/zenodo.17204738" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-journal-text" aria-hidden="true"></i> Paper</a><a target="_blank" href="https://github.com/smartlegionlab/pointer-based-security-paradigm" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a><a target="_blank" href="https://dev.to/smartlegionlab/the-pointer-based-security-paradigm-a-practical-shift-from-data-protection-to-data-non-existence-h82" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-newspaper" aria-hidden="true"></i> Article</a><a target="_blank" href="https://zenodo.org/records/17204738/files/suvorov-the-pointer-based-security-paradigm-v2.pdf?download=1" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-file-pdf" aria-hidden="true"></i> PDF</a></div></div>
+                                <p class="research-description text-center">A fundamental <span class="highlight-primary">rethinking of digital security architecture</span> that <span class="highlight-accent">eliminates vulnerable data existence</span> rather than <span class="highlight-muted">protecting it through conventional encryption</span>.</p>
+                                <div class="abstract-section mt-4 p-3 bg-dark rounded"><h4 class="text-center mb-2 text-primary"><i class="bi bi-file-text me-2" aria-hidden="true"></i>Abstract</h4><p class="mb-0 text-light small">This paper introduces the Pointer-Based Security Paradigm, which transforms digital security from protecting data during transmission and storage to architecting systems where sensitive data never exists as a vulnerable entity. The paradigm demonstrates practical implementations including zero-transmission messaging and storage-free authentication.</p></div>
+                                <div class="additional-info-section mt-4"><h4 style="padding: 10px;" class="text-center mb-3 highlight-accent">🎯 Core Transformations</h4><div class="row"><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-arrow-repeat text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">From Data Transmission to Synchronous Discovery</h5><p class="small text-muted mb-0">Information emerges through pointer-based coordination</p></div></div><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-shield-check text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">From Secret Storage to Deterministic Regeneration</h5><p class="small text-muted mb-0">Authentication via proof of knowledge</p></div></div><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-x-circle text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">From Attack Surface Protection to Architectural Elimination</h5><p class="small text-muted mb-0">Security through surface removal</p></div></div></div></div>
+                                <div class="research-stats-grid"><div class="stat-item"><div class="stats-label">Views</div><hr><div class="stats-number" id="pointer-views">0</div><hr><div class="stats-label">Unique/Total</div></div><div class="stat-item"><div class="stats-label">Downloads</div><hr><div class="stats-number" id="pointer-downloads">0</div><hr><div class="stats-label">Unique/Total</div></div></div>
+                                <div class="research-metadata"><div class="metadata-item"><span class="metadata-label">DOI:</span><span class="metadata-value code">10.5281/zenodo.17204738</span></div><div class="metadata-item"><span class="metadata-label">Published:</span><span class="metadata-value">September 26, 2025</span></div></div>
+                            </div>
+                        </div>
+
+                        <div class="card research-card mb-5">
+                            <div class="card-body d-flex flex-column">
+                                <div class="research-header text-center"><i class="bi bi-arrow-repeat paradigm-icon" aria-hidden="true"></i><h3>Local Data Regeneration <sup class="text-warning">Paradigm</sup></h3><p class="research-subtitle">Ontological Shift from Data Transmission to Synchronous State Discovery</p></div>
+                                <div class="research-links"><div class="btn-group btn-group-sm d-flex flex-wrap"><a target="_blank" href="https://doi.org/10.5281/zenodo.17264327" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-journal-text" aria-hidden="true"></i> Paper</a><a target="_blank" href="https://github.com/smartlegionlab/local-data-regeneration-paradigm" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a><a target="_blank" href="https://dev.to/smartlegionlab/the-local-data-regeneration-paradigm-ontological-shift-from-data-transmission-to-synchronous-state-21e" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-newspaper" aria-hidden="true"></i> Article</a><a target="_blank" href="https://zenodo.org/records/17264327/files/suvorov-the-local-data-regeneration-paradigm.pdf?download=1" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-file-pdf" aria-hidden="true"></i> PDF</a></div></div>
+                                <p class="research-description text-center"><span class="highlight-primary">Fundamental theoretical work</span> proposing an alternative to <span class="highlight-muted">classical information transmission</span>, where <span class="highlight-accent">data is regenerated locally</span> through <span class="highlight-primary">synchronized computation</span>.</p>
+                                <div class="abstract-section mt-4 p-3 bg-dark rounded"><h4 class="text-center mb-2 text-primary"><i class="bi bi-file-text me-2" aria-hidden="true"></i>Abstract</h4><p class="mb-0 text-light small">This work introduces the Local Data Regeneration Paradigm, which challenges the fundamental Shannonian model of information transmission. We propose an ontological shift where data is understood not as objects to be transferred, but as states reached by deterministic systems through synchronous application of shared algorithms to coordinated pointers. Communication is redefined as pointer coordination rather than content transmission. The paradigm is formalized through three foundational postulates, with analysis of applicability domains and fundamental implications for information theory and computer science. This work presents a theoretical framework requiring extensive validation and further research before practical application.</p></div>
+                                <div class="additional-info-section mt-4"><h4 style="padding: 10px;" class="text-center mb-3 highlight-accent">🎯 Foundational Postulates</h4><div class="row"><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-diagram-3 text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Data as System State</h5><p class="small text-muted mb-0">Information as computational state rather than transferable object</p></div></div><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-arrow-clockwise text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Synchronous Local Regeneration</h5><p class="small text-muted mb-0">Identical states reached through shared algorithms: <code>D = F(S, P)</code></p></div></div><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-bullseye text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Communication as Pointer Synchronization</h5><p class="small text-muted mb-0">Coordination of discovery coordinates</p></div></div></div></div>
+                                <div class="research-stats-grid"><div class="stat-item"><div class="stats-label">Views</div><hr><div class="stats-number" id="localdata-views">0</div><hr><div class="stats-label">Unique/Total</div></div><div class="stat-item"><div class="stats-label">Downloads</div><hr><div class="stats-number" id="localdata-downloads">0</div><hr><div class="stats-label">Unique/Total</div></div></div>
+                                <div class="research-metadata"><div class="metadata-item"><span class="metadata-label">DOI:</span><span class="metadata-value code">10.5281/zenodo.17264327</span></div><div class="metadata-item"><span class="metadata-label">Published:</span><span class="metadata-value">October 4, 2025</span></div></div>
+                            </div>
+                        </div>
+
+                        <div class="card research-card mb-5">
+                            <div class="card-body d-flex flex-column">
+                                <div class="research-header text-center"><i class="bi bi-cpu paradigm-icon" aria-hidden="true"></i><h3>Deterministic Game Engine <sup class="text-warning">Tech report</sup></h3><p class="research-subtitle">Practical Implementation of Security & Regeneration Paradigms</p></div>
+                                <div class="research-links"><div class="btn-group btn-group-sm d-flex flex-wrap"><a target="_blank" href="https://doi.org/10.5281/zenodo.17383447" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-journal-text" aria-hidden="true"></i> Paper</a><a target="_blank" href="https://github.com/smartlegionlab/deterministic-game-engine-report" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a><a target="_blank" href="https://dev.to/smartlegionlab/deterministic-game-engine-practical-validation-of-pointer-based-security-and-local-data-408l" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-newspaper" aria-hidden="true"></i> Article</a><a target="_blank" href="https://zenodo.org/records/17383447/files/suvorov-smart-deterministic-game-engine-report-en.pdf?download=1" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-file-pdf" aria-hidden="true"></i> PDF</a></div></div>
+                                <p class="research-description text-center">A <span class="highlight-primary">research prototype</span> demonstrating the practical feasibility of both paradigms through deterministic architecture with <span class="highlight-primary">O(1) state access</span> and <span class="highlight-primary">mathematical verification</span>.</p>
+                                <div class="abstract-section mt-4 p-3 bg-dark rounded"><h4 class="text-center mb-2 text-primary"><i class="bi bi-file-text me-2" aria-hidden="true"></i>Abstract</h4><p class="mb-0 text-light small">This technical report presents experimental validation of theoretical paradigms from author's previous works. A research prototype demonstrates architectural principles enabling infinite world generation, mass NPC simulation, and state verification without data transmission. Experimental results provide concrete evidence supporting theoretical advantages including state access times independent of position index and serverless architecture patterns.</p></div>
+                                <div class="additional-info-section mt-4"><h4 style="padding: 10px;" class="text-center mb-3 highlight-accent">🎯 Experimental Results</h4><div class="row"><div class="col-md-3 mb-3"><div class="info-item text-center p-3"><i class="bi bi-lightning text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">World Generation</h5><p class="small text-muted mb-0">2.8 million elements/second throughput</p></div></div><div class="col-md-3 mb-3"><div class="info-item text-center p-3"><i class="bi bi-speedometer2 text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">State Access</h5><p class="small text-muted mb-0">O(1) constant-time across all positions</p></div></div><div class="col-md-3 mb-3"><div class="info-item text-center p-3"><i class="bi bi-graph-up text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Entity Simulation</h5><p class="small text-muted mb-0">Linear O(n) scaling characteristics</p></div></div><div class="col-md-3 mb-3"><div class="info-item text-center p-3"><i class="bi bi-shield-check text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Verification</h5><p class="small text-muted mb-0">Cryptographic operation verification capabilities</p></div></div></div></div>
+                                <div class="research-stats-grid"><div class="stat-item"><div class="stats-label">Views</div><hr><div class="stats-number" id="engine-views">0</div><hr><div class="stats-label">Unique/Total</div></div><div class="stat-item"><div class="stats-label">Downloads</div><hr><div class="stats-number" id="engine-downloads">0</div><hr><div class="stats-label">Unique/Total</div></div></div>
+                                <div class="research-metadata"><div class="metadata-item"><span class="metadata-label">DOI:</span><span class="metadata-value code">10.5281/zenodo.17383447</span></div><div class="metadata-item"><span class="metadata-label">Published:</span><span class="metadata-value">October 18, 2025</span></div></div>
+                            </div>
+                        </div>
+
+                        <div class="card research-card mb-5">
+                            <div class="card-body d-flex flex-column">
+                                <div class="research-header text-center"><i class="bi bi-arrow-repeat paradigm-icon" aria-hidden="true"></i><h3>Position-Candidate-Hypothesis (PCH) <sup class="text-warning">Paradigm</sup></h3><p class="research-subtitle">A Structural-Statistical Approach to NP-Complete Problems</p></div>
+                                <div class="research-links"><div class="btn-group btn-group-sm d-flex flex-wrap"><a target="_blank" href="https://doi.org/10.5281/zenodo.17614888" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-journal-text" aria-hidden="true"></i> Paper</a><a target="_blank" href="https://github.com/smartlegionlab/position-candidate-hypothesis-paradigm" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a><a target="_blank" href="https://dev.to/smartlegionlab/position-candidate-hypothesis-pch-paradigm-a-new-research-direction-for-np-complete-problems-2b00" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-newspaper" aria-hidden="true"></i> Article</a><a target="_blank" href="https://zenodo.org/records/17614888/files/suvorov_position_candidate_hypothesis_en.pdf?download=1" class="btn btn-outline-primary me-1 mb-1"><i class="bi bi-file-pdf" aria-hidden="true"></i> PDF</a></div></div>
+                                <p class="research-description text-center"><span class="highlight-primary">Novel structural-statistical approach</span> that transforms <span class="highlight-muted">NP-complete problem-solving</span> from exhaustive search to <span class="highlight-accent">systematic decomposition</span> into positions, candidates, and hypotheses, followed by <span class="highlight-primary">parallel investigation</span> and <span class="highlight-accent">statistical synthesis</span>.</p>
+                                <div class="abstract-section mt-4 p-3 bg-dark rounded"><h4 class="text-center mb-2 text-primary"><i class="bi bi-file-text me-2" aria-hidden="true"></i>Abstract</h4><p class="mb-0 text-light small">This research paper introduces the Position-Candidate-Hypothesis (PCH) paradigm as a novel theoretical approach to NP-complete problems. This work proposes a fundamental shift from traditional combinatorial search to structuralstatistical analysis. The research explores the decomposition of problems into three interconnected components: positions, candidates, and hypotheses, followed by statistical integration. This work presents a new perspective on computational problem-solving that emphasizes structural analysis and pattern recognition over exhaustive search methods.</p></div>
+                                <div class="additional-info-section mt-4"><h4 style="padding: 10px;" class="text-center mb-3 highlight-accent">📐 Fundamental Components</h4><div class="row"><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-grid-3x3 text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Positions (n)</h5><p class="small text-muted mb-0">Structural elements in solution space. For problem size n, there are n positions.</p></div></div><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-list-check text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Candidates (n)</h5><p class="small text-muted mb-0">Entities for position assignments. Each position considers n candidates.</p></div></div><div class="col-md-4 mb-3"><div class="info-item text-center p-3"><i class="bi bi-lightbulb text-primary mb-2" style="font-size: 1.5rem;"></i><h5 class="mb-2">Hypotheses (n)</h5><p class="small text-muted mb-0">Independent research processes. n hypotheses provide complete problem coverage.</p></div></div></div><div class="research-proposition mt-3 p-3 bg-dark rounded text-center"><p class="mb-0 text-light"><strong>Research Proposition:</strong> PCH uses n hypotheses, n positions, and n candidates per position for problems of size n.</p></div></div>
+                                <div class="research-stats-grid"><div class="stat-item"><div class="stats-label">Views</div><hr><div class="stats-number" id="pch-views">0</div><hr><div class="stats-label">Unique/Total</div></div><div class="stat-item"><div class="stats-label">Downloads</div><hr><div class="stats-number" id="pch-downloads">0</div><hr><div class="stats-label">Unique/Total</div></div></div>
+                                <div class="research-metadata"><div class="metadata-item"><span class="metadata-label">DOI:</span><span class="metadata-value code">10.5281/zenodo.17614888</span></div><div class="metadata-item"><span class="metadata-label">Published:</span><span class="metadata-value">November 15, 2025</span></div></div>
+                            </div>
+                        </div>
+
+                        <div class="paradigms-evolution-section mt-5">
+                            <h3 class="section-title text-center mb-5">Paradigms Evolution</h3>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="evolution-card"><div class="evolution-header"><i class="bi bi-shield-check evolution-icon" aria-hidden="true"></i><h4 class="evolution-title">Pointer-Based Security</h4><p class="evolution-subtitle">Architectural Security Transformation</p></div><div class="paradigm-timeline"><div class="timeline-container"><div class="timeline-item" data-step="1"><div class="timeline-marker"></div><div class="timeline-content"><h5>Theoretical Foundation</h5><p class="text-muted small">Architectural Transition from Data Protection to No Vulnerable Data</p></div></div><div class="timeline-item" data-step="2"><div class="timeline-marker"></div><div class="timeline-content"><h5>Architectural Framework</h5><p class="text-muted small">Three fundamental transformations in security architecture</p></div></div><div class="timeline-item" data-step="3"><div class="timeline-marker"></div><div class="timeline-content"><h5>Experimental Validation</h5><p class="text-muted small">Proof-of-concept confirming paradigm feasibility</p></div></div></div><button class="btn btn-sm btn-outline-primary mt-3 w-100" id="playTimelinePointer"><i class="bi bi-play-circle" aria-hidden="true"></i> Animate Evolution</button></div></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="evolution-card"><div class="evolution-header"><i class="bi bi-arrow-repeat evolution-icon" aria-hidden="true"></i><h4 class="evolution-title">Local Data Regeneration</h4><p class="evolution-subtitle">Information Theory Transformation</p></div><div class="paradigm-timeline"><div class="timeline-container"><div class="timeline-item" data-step="1"><div class="timeline-marker"></div><div class="timeline-content"><h5>Ontological Foundation</h5><p class="text-muted small">Reconceptualizing data as discoverable state</p></div></div><div class="timeline-item" data-step="2"><div class="timeline-marker"></div><div class="timeline-content"><h5>Theoretical Framework</h5><p class="text-muted small">Three postulates of local data regeneration</p></div></div><div class="timeline-item" data-step="3"><div class="timeline-marker"></div><div class="timeline-content"><h5>Implementation Validation</h5><p class="text-muted small">Proof-of-concept confirming paradigm feasibility</p></div></div></div><button class="btn btn-sm btn-outline-primary mt-3 w-100" id="playTimelineLocalData"><i class="bi bi-play-circle" aria-hidden="true"></i> Animate Evolution</button></div></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="evolution-card"><div class="evolution-header"><i class="bi bi-cpu evolution-icon" aria-hidden="true"></i><h4 class="evolution-title">Deterministic Engine</h4><p class="evolution-subtitle">Practical Implementation</p></div><div class="paradigm-timeline"><div class="timeline-container"><div class="timeline-item" data-step="1"><div class="timeline-marker"></div><div class="timeline-content"><h5>Pointer-Based Security</h5><p class="text-muted small">Theoretical foundation for data non-existence</p></div></div><div class="timeline-item" data-step="2"><div class="timeline-marker"></div><div class="timeline-content"><h5>Local Data Regeneration</h5><p class="text-muted small">Ontological shift from transmission to discovery</p></div></div><div class="timeline-item" data-step="3"><div class="timeline-marker"></div><div class="timeline-content"><h5>Practical Implementation</h5><p class="text-muted small">Experimental validation through deterministic engine</p></div></div></div><button class="btn btn-sm btn-outline-primary mt-3 w-100" id="playTimelineEngine"><i class="bi bi-play-circle" aria-hidden="true"></i> Animate Evolution</button></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <div class="container text-center">
+                        <footer>
+                            <p class="text-muted">© <span id="currentYear"></span> <a target="_blank" href="https://github.com/smartlegionlab">Alexander Suvorov</a></p>
+                        </footer>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/stats-manager.js"></script>
+    <script src="js/particle-background.js"></script>
+    <script src="js/scroll-manager.js"></script>
+    <script src="js/animation-manager.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/active-nav.js"></script>
+    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof ScrollManager !== 'undefined') { new ScrollManager(); }
+            else { console.error('ScrollManager not found'); }
+        });
+    </script>
+</body>
+</html>
