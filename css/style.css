@@ -1987,3 +1987,11 @@ hr:last-of-type {
         font-size: 0.65rem;
     }
 }
+
+.author-link {
+    color: white;
+}
+
+.author-link:hover {
+    color: #0d6efd;
+}
