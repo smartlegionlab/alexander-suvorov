@@ -493,26 +493,17 @@ body { background-attachment: fixed; }
     text-decoration: none;
     font-size: 0.5rem;
     transition: all 0.3s ease;
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 0;
-    max-width: 55px;
     min-height: 35px;
     margin: 0 3px;
     position: relative;
-}
-
-.mobile-nav-btn i {
-    font-size: 1.1rem;
-    margin-bottom: 2px;
-    transition: all 0.3s ease;
+    width: auto;
 }
 
 .mobile-nav-btn span {
-    font-size: 0.55rem;
     font-weight: 500;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     max-width: 100%;
     transition: all 0.3s ease;
 }
@@ -1780,6 +1771,7 @@ hr:last-of-type {
 
     .mobile-nav-btn span {
         font-size: 0.55rem;
+        display: none;
     }
 }
 
@@ -1900,6 +1892,7 @@ hr:last-of-type {
 
     .mobile-nav-btn span {
         font-size: 0.5rem;
+        display: none;
     }
 }
 
@@ -1964,6 +1957,7 @@ hr:last-of-type {
 
     .mobile-nav-btn span {
         font-size: 0.6rem;
+        display: none;
     }
 }
 
@@ -1975,7 +1969,6 @@ hr:last-of-type {
 
     .mobile-nav-btn {
         padding: 3px 5px;
-        max-width: 55px;
         min-height: 35px;
     }
 
