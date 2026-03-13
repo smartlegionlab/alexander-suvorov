@@ -12,9 +12,16 @@ class ScrollManager {
     }
 
     setupEventListeners() {
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            this.toggleScrollToTop();
-            this.updateScrollProgress();
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    this.toggleScrollToTop();
+                    this.updateScrollProgress();
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
 
         this.scrollToTopBtn.addEventListener('click', () => {
