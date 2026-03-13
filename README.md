@@ -1,4 +1,4 @@
-# 🔬 Alexander Suvorov - Academic Research Portfolio <sup>v2.2.0<sup>
+# 🔬 Alexander Suvorov - Academic Research Portfolio <sup>v2.2.1<sup>
 
 [![Live Site](https://img.shields.io/badge/Academic%20Portfolio-alexander--suvorov.ru-purple?style=for-the-badge&logo=google-scholar)](https://alexander-suvorov.ru)
 [![Technical Portfolio](https://img.shields.io/badge/Technical%20Portfolio-smartlegionlab.ru-blue?style=for-the-badge&logo=github)](https://smartlegionlab.ru)
@@ -43,7 +43,7 @@ The site displays real-time statistics for all four Zenodo publications:
 | **Pointer-Based Security** | `10.5281/zenodo.17204738` | Unique/Total Views & Downloads |
 | **Local Data Regeneration** | `10.5281/zenodo.17264327` | Unique/Total Views & Downloads |
 | **Deterministic Game Engine** | `10.5281/zenodo.17383447` | Unique/Total Views & Downloads |
-| **PCH Paradigm** | `10.5281/zenodo.17614888` | Unique/Total Views & Downloads |
+| **Position-Candidate-Hypothesis (PCH) Paradigm** | `10.5281/zenodo.17614888` | Unique/Total Views & Downloads |
 | **Aggregate Metrics** | — | Total unique downloads (500+), total downloads (1000+), unique views (500+), total views (1000+), 4 publications, 3 paradigms |
 
 ### 🚀 Key Features
@@ -179,7 +179,7 @@ The site displays real-time statistics for all four Zenodo publications:
   - **Positions (n)**: Structural elements in solution space
   - **Candidates (n)**: Entities for position assignments
   - **Hypotheses (n)**: Independent research processes
-- **Research Proposition**: PCH uses n hypotheses, n positions, and n candidates per position for problems of size n
+- **Research Proposition**: Position-Candidate-Hypothesis (PCH) Paradigm uses n hypotheses, n positions, and n candidates per position for problems of size n
 - **Stats Display**: Unique/total views and downloads on research card
 
 ---

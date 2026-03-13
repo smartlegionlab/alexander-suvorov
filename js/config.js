@@ -37,11 +37,11 @@ const CONFIG = {
         }
     },
     HEADER_COUNTERS: {
-        headerProjects: 4,
-        headerParadigms: 3
+        headerProjects: "4+",
+        headerParadigms: "3+"
     },
     METRICS_COUNTERS: {
-        metricProjects: 4,
-        metricParadigms: 3
+        metricProjects: "4",
+        metricParadigms: "3"
     }
 };
