@@ -484,8 +484,9 @@ body { background-attachment: fixed; }
     text-decoration: none;
     font-size: 0.5rem;
     transition: all 0.3s ease;
-    flex: 0 1 auto;
+    flex: 1;
     min-width: 0;
+    max-width: 55px;
     min-height: 35px;
     margin: 0 3px;
     position: relative;
