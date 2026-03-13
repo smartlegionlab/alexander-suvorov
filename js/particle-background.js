@@ -119,7 +119,7 @@ class ParticleBackground {
 
     getParticleCount() {
         if (window.innerWidth < 1024) return 45;
-        return 45;
+        return 70;
     }
 
     handleResize() {
