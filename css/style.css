@@ -2071,3 +2071,233 @@ a.premium-card {
         font-size: 1.1rem;
     }
 }
+
+.pdf-viewer-section {
+    margin: 2rem 0;
+}
+
+.pdf-container {
+    background: rgba(22, 27, 34, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pdf-header {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pdf-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pdf-header-left i {
+    font-size: 1.5rem;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.pdf-header-left h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-header-right .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.pdf-header-right .btn-outline-light:hover {
+    background: white;
+    color: var(--accent);
+    border-color: white;
+}
+
+.pdf-viewer-options {
+    padding: 1.5rem;
+    background: var(--secondary);
+}
+
+.pdf-viewer-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pdf-tab {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.pdf-tab:hover {
+    color: var(--accent);
+    background: rgba(13, 110, 253, 0.1);
+}
+
+.pdf-tab.active {
+    color: var(--accent);
+    background: rgba(13, 110, 253, 0.15);
+    border-bottom: 2px solid var(--accent);
+}
+
+.pdf-tab-content {
+    display: none;
+}
+
+.pdf-tab-content.active {
+    display: block;
+}
+
+.pdf-google-viewer {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+}
+
+.pdf-embed {
+    background: var(--secondary);
+    padding: 1.5rem;
+    min-height: 600px;
+}
+
+.pdf-embed object {
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-download-section {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(13, 110, 253, 0.05);
+    border-radius: 10px;
+    border: 2px dashed var(--border);
+}
+
+.pdf-download-section i {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.pdf-download-section h4 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.pdf-download-section p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.pdf-download-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pdf-metadata-bar {
+    background: rgba(13, 110, 253, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pdf-metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.pdf-metadata-item i {
+    color: var(--accent);
+}
+
+.pdf-metadata-item strong {
+    color: var(--text-light);
+    margin-right: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .pdf-google-viewer {
+        height: 400px;
+    }
+
+    .pdf-embed {
+        min-height: 400px;
+        padding: 1rem;
+    }
+
+    .pdf-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-header-right {
+        width: 100%;
+    }
+
+    .pdf-header-right .btn {
+        width: 100%;
+    }
+
+    .pdf-metadata-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-download-section {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pdf-google-viewer {
+        height: 300px;
+    }
+
+    .pdf-embed {
+        min-height: 300px;
+    }
+
+    .pdf-viewer-tabs {
+        justify-content: center;
+    }
+
+    .pdf-tab {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
