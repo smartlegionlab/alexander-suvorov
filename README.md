@@ -1,4 +1,4 @@
-# 🔬 Alexander Suvorov - Academic Research Portfolio <sup>v2.3.0<sup>
+# 🔬 Alexander Suvorov - Academic Research Portfolio <sup>v2.3.1<sup>
 
 [![Live Site](https://img.shields.io/badge/Academic%20Portfolio-alexander--suvorov.ru-purple?style=for-the-badge&logo=google-scholar)](https://alexander-suvorov.ru)
 [![Technical Portfolio](https://img.shields.io/badge/Technical%20Portfolio-smartlegionlab.ru-blue?style=for-the-badge&logo=github)](https://smartlegionlab.ru)
