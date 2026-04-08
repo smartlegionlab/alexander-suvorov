@@ -1,4 +1,4 @@
-# 🔬 Alexander Suvorov - Academic Research Portfolio <sup>v2.3.1<sup>
+# Alexander Suvorov - Academic Research Portfolio <sup>v2.3.1<sup>
 
 [![Live Site](https://img.shields.io/badge/Academic%20Portfolio-alexander--suvorov.ru-purple?style=for-the-badge&logo=google-scholar)](https://alexander-suvorov.ru)
 [![Technical Portfolio](https://img.shields.io/badge/Technical%20Portfolio-smartlegionlab.ru-blue?style=for-the-badge&logo=github)](https://smartlegionlab.ru)
@@ -14,7 +14,17 @@
 
 ---
 
-## 🤖 Zero-Cost Automated Research Dashboard
+## ⚠️ Disclaimer
+
+**By using this software, you agree to the full disclaimer terms.**
+
+**Summary:** Software provided "AS IS" without warranty. You assume all risks.
+
+**Full legal disclaimer:** See [DISCLAIMER.md](https://github.com/smartlegionlab/alexander-suvorov/blob/master/DISCLAIMER.md)
+
+---
+
+## Zero-Cost Automated Research Dashboard
 
 **Serverless Static Site with Automated Research Metrics**:
 
@@ -23,7 +33,7 @@
 [![GitHub Pages](https://img.shields.io/badge/Hosting-GitHub%20Pages-orange?logo=github)](https://pages.github.com)
 [![Zenodo API](https://img.shields.io/badge/API-Zenodo-blue?logo=zenodo)](https://developers.zenodo.org)
 
-### 🔄 How It Works
+### How It Works
 
 This site is **fully automated** — it fetches live research metrics daily and updates itself without any manual intervention or hosting costs.
 
@@ -34,7 +44,7 @@ GitHub Actions (cron) → Python Script → Zenodo API → JSON Data → Static 
     at midnight        for 4 DOIs       with metrics    locally     HTML pages
 ```
 
-### 📊 Live Research Metrics
+### Live Research Metrics
 
 The site displays real-time statistics for all four Zenodo publications:
 
@@ -46,18 +56,18 @@ The site displays real-time statistics for all four Zenodo publications:
 | **Position-Candidate-Hypothesis (PCH) Paradigm** | `10.5281/zenodo.17614888` | Unique/Total Views & Downloads |
 | **Aggregate Metrics** | — | Total unique downloads (500+), total downloads (1000+), unique views (500+), total views (1000+), 4 publications, 3 paradigms |
 
-### 🚀 Key Features
+### Key Features
 
 | Feature | How It Works | Benefit |
 |---------|--------------|---------|
-| **📊 Live Research Metrics** | Daily Zenodo API calls via GitHub Actions | Always shows current publication statistics |
-| **🔁 Automatic Fallback** | Config.js stores hardcoded values | Site works even if Zenodo API is down |
-| **⚡ Zero Client-Side API** | All data fetched at build time | No CORS issues, no rate limiting, faster load |
-| **🔗 DOI Integration** | Every publication has permanent DOI links | Proper academic citation support |
-| **📱 Research-First Design** | Dark academic theme with paper-like containers | Professional presentation for academic audience |
-| **💰 Zero Cost** | Hosted on GitHub Pages | Only pay for domain name |
+| **Live Research Metrics** | Daily Zenodo API calls via GitHub Actions | Always shows current publication statistics |
+| **Automatic Fallback** | Config.js stores hardcoded values | Site works even if Zenodo API is down |
+| **Zero Client-Side API** | All data fetched at build time | No CORS issues, no rate limiting, faster load |
+| **DOI Integration** | Every publication has permanent DOI links | Proper academic citation support |
+| **Research-First Design** | Dark academic theme with paper-like containers | Professional presentation for academic audience |
+| **Zero Cost** | Hosted on GitHub Pages | Only pay for domain name |
 
-### 📁 File Structure: Atomic Data Flow
+### File Structure: Atomic Data Flow
 
 ```
 /
@@ -94,7 +104,7 @@ The site displays real-time statistics for all four Zenodo publications:
 
 ---
 
-## 🛠 Technology Stack: Two-Layer Architecture
+## Technology Stack: Two-Layer Architecture
 
 ### Frontend: The Presentation Layer
 | Technology                    | Purpose                  | Implementation                                                              |
@@ -138,7 +148,7 @@ The site displays real-time statistics for all four Zenodo publications:
 
 ---
 
-## 🔬 The Four Research Paradigms
+## The Four Research Paradigms
 
 ### 1. Pointer-Based Security Paradigm
 - **DOI**: `10.5281/zenodo.17204738`
@@ -184,7 +194,7 @@ The site displays real-time statistics for all four Zenodo publications:
 
 ---
 
-## 📊 Stats Manager Deep Dive
+## Stats Manager Deep Dive
 
 The `StatsManager` class (in `stats-manager.js`) handles all research metrics:
 
@@ -215,7 +225,7 @@ The `StatsManager` class (in `stats-manager.js`) handles all research metrics:
 
 ---
 
-## 🚀 Local Development & Manual Build
+## Local Development & Manual Build
 
 ### Prerequisites
 - Python 3.8+
@@ -243,19 +253,18 @@ python -m http.server 8000
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **BSD 3-Clause License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📬 Connect with Alexander Suvorov
+## Connect with Alexander Suvorov
 
-- **🎓 Academic Portfolio:** [alexander-suvorov.ru](https://alexander-suvorov.ru)
-- **🌐 Technical Portfolio:** [smartlegionlab.ru](https://smartlegionlab.ru)
-- **💻 GitHub:** [@smartlegionlab](https://github.com/smartlegionlab)
-- **📝 ORCID:** [0009-0006-3427-9611](https://orcid.org/0009-0006-3427-9611)
-- **📦 Zenodo:** [Publications](https://zenodo.org/search?q=metadata.creators.name:%22Suvorov,%20Alexander%22)
+- **Academic Portfolio:** [alexander-suvorov.ru](https://alexander-suvorov.ru)
+- **GitHub:** [@smartlegionlab](https://github.com/smartlegionlab)
+- **ORCID:** [0009-0006-3427-9611](https://orcid.org/0009-0006-3427-9611)
+- **Zenodo:** [Publications](https://zenodo.org/search?q=metadata.creators.name:%22Suvorov,%20Alexander%22)
 
 ---
 
