@@ -4,7 +4,7 @@ class ParticleBackground {
             return window.particleBackgroundInstance;
         }
 
-        this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        // this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
 //        if (this.isMobile) return;
 
         this.canvas = document.createElement('canvas');
@@ -22,11 +22,11 @@ class ParticleBackground {
             'Data Non-Existence Philosophy',
             'Synchronous State Discovery',
 
-            'SmartPassLib Ecosystem',
+            'Smart Passwords Ecosystem',
             'SmartPassLib Cross-Platform',
-            'TSP Ecosystem',
-            '2FA Manager Ecosystem',
-            'Repository Manager Ecosystem',
+            'NP Problem Ecosystem',
+            '2FA Management Ecosystem',
+            'Repository Management Ecosystem',
             'Deterministic Ecosystem',
             'Research Ecosystem',
 
@@ -130,7 +130,7 @@ class ParticleBackground {
             'System Integration',
             'High-Performance Computing',
             'Cryptographic Security',
-            'GitHub Automation',
+            'GitHub/Forgejo automation',
             'Open Source Ecosystem',
 
             'Python', 'Go', 'C#', 'Kotlin', 'JavaScript',
@@ -222,7 +222,7 @@ class ParticleBackground {
 //
 //            'Smart Legion Lab',
 //            'Alexander Suvorov',
-//            'SmartPassLib Ecosystem',
+//            'Smart Passwords Ecosystem',
 //
 //            'Zenodo DOI',
 //            'Open Access',
@@ -311,7 +311,7 @@ class ParticleBackground {
         this.ctx.textAlign = 'center';
         this.ctx.textBaseline = 'middle';
         this.ctx.font = `500 ${this.getResponsiveFontSize()}px 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace`;
-
+        
         for (let particle of this.particlesArray) {
             this.ctx.fillStyle = `rgba(13, 110, 253, ${particle.opacity})`;
             this.ctx.fillText(particle.text, particle.x, particle.y);

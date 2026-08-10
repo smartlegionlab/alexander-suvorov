@@ -1,343 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Alexander Suvorov · Software Architect · Full-Stack Developer · Researcher · Paradigms Author</title>
-    <meta name="description" content="Software Architect, Full-Stack Developer, Researcher. Building apps, libraries, ecosystems, paradigms. From idea to production.">
+    <title>Alexander Suvorov | CS Researcher, Paradigm Creator & Architect</title>
+    <meta name="description" content="Alexander Suvorov (smartlegionlab): Computer Science Researcher, Paradigm Creator, and Multi-Language Systems Architect with 15+ years of expertise.">
     <meta name="author" content="Alexander Suvorov">
     <meta name="copyright" content="Alexander Suvorov">
-
-    <link rel="canonical" href="https://alexander-suvorov.ru">
+    <link rel="canonical" href="https://alexander-suvorov.ru/">
     <link rel="author" href="https://github.com/smartlegionlab">
-
-    <meta property="og:title" content="Alexander Suvorov · Software Architect · Full-Stack Developer · Researcher · Paradigms Author">
-    <meta property="og:description" content="Software Architect, Full-Stack Developer, Researcher. Building apps, libraries, ecosystems, paradigms. From idea to production.">
+    <meta property="og:title" content="Alexander Suvorov | CS Researcher, Paradigm Creator & Architect">
+    <meta property="og:description" content="Alexander Suvorov (smartlegionlab): Computer Science Researcher, Paradigm Creator, and Multi-Language Systems Architect with 15+ years of expertise.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://alexander-suvorov.ru">
-    <meta property="og:site_name" content="Alexander Suvorov · Portfolio">
-
+    <meta property="og:url" content="https://alexander-suvorov.ru/">
+    <meta property="og:site_name" content="Alexander Suvorov | CS Researcher, Paradigm Creator & Architect">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Alexander Suvorov",
-            "url": "https://alexander-suvorov.ru",
-            "jobTitle": "Software Architect, Full-Stack Developer, Independent Researcher",
-            "description": "Software Architect specializing in secure, cross-platform ecosystems and zero-storage architectures. Author of 4 research paradigms with DOI. Partner with me to build your next project from idea to scale",
+            "name": "Alexander Suvorov | CS Researcher, Paradigm Creator & Architect",
+            "url": "https://alexander-suvorov.ru/",
+            "jobTitle": "Alexander Suvorov | CS Researcher, Paradigm Creator & Architect",
+            "description": "Alexander Suvorov (smartlegionlab): Computer Science Researcher, Paradigm Creator, and Multi-Language Systems Architect with 15+ years of expertise.",
             "sameAs": [
-                "https://alexander-suvorov.ru",
-                "https://github.com/smartlegionlab",
-                "https://orcid.org/0009-0006-3427-9611",
-                "https://doi.org/10.5281/zenodo.17204738",
-                "https://doi.org/10.5281/zenodo.17264327",
-                "https://doi.org/10.5281/zenodo.17383447",
-                "https://doi.org/10.5281/zenodo.17614888",
+                "https://smartlegionlab.ru",
+                 "https://github.com/smartlegionlab",
                 "https://pypi.org/user/smartlegionlab",
-                "https://dev.to/smartlegionlab",
-                "https://ru.linkedin.com/in/smartlegionlabx",
-                "https://smartlegionlab.ru"
+                "https://alexander-suvorov.ru"
             ]
         }
     </script>
-
     <meta name="theme-color" content="#0d1117">
-
     <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap/bootstrap_icons/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%230d6efd'/><stop offset='100%' stop-color='%230b5ed7'/></linearGradient></defs><path d='M50 15 L20 30 L20 45 C20 65 35 85 50 90 C65 85 80 65 80 45 L80 30 Z' fill='url(%23grad)' stroke='%23ffffff' stroke-width='2'/><path d='M45 55 L35 45 L40 40 L45 45 L60 30 L65 35 Z' fill='%23ffffff'/></svg>">
 </head>
-<body>
-    <div class="scroll-progress">
-        <div class="scroll-progress-bar"></div>
-    </div>
 
-    <button class="scroll-to-top" id="scrollToTop">
-        <i class="bi bi-chevron-up"></i>
+<body>
+
+<!-- nav -->
+
+<nav class="fixed-top-nav">
+    <div class="nav-container">
+        <div class="nav-left">
+            <button class="sidebar-toggle-btn" id="sidebarToggle">
+                <i class="bi bi-list"></i>
+            </button>
+            <a href="/" class="nav-logo">
+                <i class="bi bi-incognito"></i>
+                <span class="logo-text">Alexander Suvorov</span>
+            </a>
+        </div>
+
+        <div class="d-none d-lg-flex gap-3 mx-auto main-links">
+            <a href="https://smartlegionlab.ru/research.html" class="small text-light">
+                Research
+            </a>
+            <a href="https://smartlegionlab.ru/ecosystems.html" class="small text-light">
+                Ecosystems
+            </a>
+            <a href="https://smartlegionlab.ru/applications.html" class="small text-light">
+                Apps
+            </a>
+            <a href="https://smartlegionlab.ru/projects.html" class="small text-light">
+                Projects
+            </a>
+            <a href="https://smartlegionlab.ru/libraries.html" class="small text-light">
+                Libraries
+            </a>
+            <a href="https://smartlegionlab.ru/articles.html" class="small text-light">
+                Articles
+            </a>
+            <a href="https://smartlegionlab.ru/profiles/smartlegionlab.html" class="small text-light">
+                Contact As
+            </a>
+        </div>
+
+    </div>
+    <div class="nav-progress">
+        <div class="nav-progress-bar"></div>
+        <div class="nav-progress-ball">0%</div>
+    </div>
+</nav>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="boot-sidebar" id="bootSidebar">
+    <button class="sidebar-close" id="sidebarClose">
+        <i class="bi bi-x-lg"></i>
     </button>
 
-    <div class="container">
-        <div class="paper-container">
-
-            <header class="professional-header">
-                <div class="container">
-                    <div class="header-content">
-                        <div class="main-profile-row">
-                            <div class="avatar-container">
-                                <div class="profile-avatar">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" class="bi bi-incognito text-dark" viewBox="0 0 16 16">
-                                        <path d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205l-.014-.058-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5s-1.411-.136-2.025-.267c-.541-.115-1.093.2-1.239.735m.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a30 30 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274M3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5m-1.5.5q.001-.264.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085q.084.236.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="profile-info">
-                                <h1 class="name">Alexander Suvorov</h1>
-                                <p class="title text-primary">Software Architect | Full-Stack Developer | Independent Researcher | Paradigms Author</p>
-                                <div class="badges">
-                                    <span class="badge bg-primary custom-style">Paradigms Author</span>
-                                    <span class="badge bg-primary custom-style">Research Publications</span>
-                                    <span class="badge bg-primary custom-style">Software Architecture</span>
-                                    <span class="badge bg-primary custom-style">Full‑Stack Development</span>
-                                    <span class="badge bg-primary custom-style">Cross‑Platform Ecosystems</span>
-                                    <span class="badge bg-primary custom-style">Apps · Libraries · Engines</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row g-3 mt-3">
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="experience">10+</div>
-                                    <div class="stat-label">Years Experience</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="paradigms">4+</div>
-                                    <div class="stat-label">Paradigms</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="ecosystems">6+</div>
-                                    <div class="stat-label">Ecosystems</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="repos">70+</div>
-                                    <div class="stat-label">Open Source Repos</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="pypi">27+</div>
-                                    <div class="stat-label">PyPI Packages</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="projects">350+</div>
-                                    <div class="stat-label">Projects Delivered</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="paradigm.unique_views">1K+</div>
-                                    <div class="stat-label">Paradigms View</div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="card-custom stat text-center p-2 rounded custom-style">
-                                    <div class="stat-number" data-smart-key="paradigm.unique_downloads">850+</div>
-                                    <div class="stat-label">Paradigms Download</div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </header>
-
-            <main style="padding: 5px">
-                <nav class="mobile-navigation" id="mobileNav">
-                    <div class="mobile-nav-container">
-                        <a href="/" class="mobile-nav-btn active" aria-label="Go to Home page"><i class="bi bi-house"></i></a>
-                        <a href="/about.html" class="mobile-nav-btn" aria-label="Go to About page"><i class="bi bi-person"></i></a>
-                        <a href="/research.html" class="mobile-nav-btn" aria-label="Go to Research page"><i class="bi bi-journal-text"></i></a>
-                        <a href="/expertise.html" class="mobile-nav-btn" aria-label="Go to Expertise page"><i class="bi bi-gear"></i></a>
-                        <a href="/articles.html" class="mobile-nav-btn" aria-label="Go to Articles page"><i class="bi bi-newspaper"></i></a>
-                        <a target="_blank" href="https://smartlegionlab.ru" class="mobile-nav-btn" aria-label="Go to smartlegionlab.ru"><i class="bi bi-diagram-3"></i></a>
-                        <a target="_blank" href="https://githib.com/smartlegionlab" class="mobile-nav-btn" aria-label="Go to Github @smartlegionlab"><i class="bi bi-github"></i></a>
-                        <a target="_blank" href="https://orcid.org/0009-0006-3427-9611" class="mobile-nav-btn" aria-label="Go to ORCID 0009-0006-3427-9611"><i class="bi bi-person-badge"></i></a>
-                    </div>
-                </nav>
-                <br>
-
-                <div class="col-md-12 col-12 mb-3">
-                    <div class="p-3 card-custom" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                        <div class="content-section">
-                    <div class="container">
-                        <h2 class="section-title">Who I Am</h2>
-                        <hr>
-                        <p>
-                            I'm a <a href="/about.html" class="text-decoration-none">Software Architect</a> who designs and builds
-                            cross‑platform <a target="_blank" href="https://smartlegionlab.ru">ecosystems</a> —
-                            from <a target="_blank" href="https://github.com/smartlegionlab/smart-social-network">web</a>
-                            and <a target="_blank" href="https://github.com/smartlegionlab/SmartPasswordManagerCsharpDesktop">desktop</a> to
-                            <a target="_blank" href="https://github.com/smartlegionlab/smart-2fa-manager-android">mobile</a> and
-                            <a target="_blank" href="https://github.com/smartlegionlab/clipassman">CLI</a>. As a Full‑Stack <a target="_blank" href="https://github.com/smartlegionlab/">Developer</a> with 10+ years of
-                            <a class="text-decoration-none" href="/expertise.html">experience</a>, I take
-                            <a target="_blank" href="https://smartlegionlab.ru">projects</a> from idea to
-                            <a target="_blank" href="https://smartlegionlab.ru">production</a>: <span class="text-warning">
-                            350+</span> delivered, <span class="text-warning">6</span> ecosystems,
-                            <span class="text-warning" data-smart-key="pypi">27+</span> PYPI packages,
-                            <span class="text-warning" data-smart-key="repos">69+</span>
-                            open source <a target="_blank" href="https://smartlegionlab.ru">repos</a>.
-                            I also conduct <a class="text-decoration-none" href="/research.html">independent research</a> — author of
-                            <span class="text-warning">4</span> <a class="text-decoration-none" href="/research.html">paradigms</a>
-                            with DOI publications in <a class="text-decoration-none" href="/research/pointer-based-security.html">security</a>,
-                            <a class="text-decoration-none" href="/research/local-data-regeneration.html">information theory</a>,
-                            and <a class="text-decoration-none" href="/research/position-candidate-hypothesis.html">computational complexity</a>.
-                            One <a class="text-decoration-none" href="/about.html">person</a> — full cycle: <a class="text-decoration-none" href="/research.html">research</a>
-                            → <a class="text-decoration-none" href="/expertise.html">architecture</a> →
-                            <a target="_blank" href="https://smartlegionlab.ru">implementation</a> → <a target="_blank" href="https://smartlegionlab.ru">production</a>.
-                        </p>
-                        <hr>
-                        <div class="text-center mt-3">
-                            <span>Open to consulting, development, research collaborations</span>
-                        </div>
-
-                        <div class="text-center mt-4">
-                            <a href="/about.html" class="btn btn-outline-primary me-2">More About Me →</a>
-                            <a href="mailto:smartlegionlab@gmail.com" class="btn btn-outline-warning">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <div class="container">
-                        <h2 class="section-title">Explore</h2>
-                        <div class="row text-center">
-                            <div class="col-md-3 col-6 mb-3">
-                                <a href="/about.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2">Expert</span>
-                                        <i class="bi bi-person text-primary fs-1"></i>
-                                        <div class="fw-bold mt-2 text-light">About Me</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a href="/about.html" class="btn btn-outline-primary me-2">About Me →</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 mb-3">
-                                <a href="/expertise.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2">10+ year</span>
-                                        <i class="bi bi-gear text-primary fs-1"></i>
-                                        <div class="fw-bold mt-2 text-light">Expertise</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a href="/expertise.html" class="btn btn-outline-primary me-2">Expertise →</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 mb-3">
-                                <a href="/research.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2" data-smart-key="publications">4+</span>
-                                        <i class="bi bi-journal-text text-primary fs-1"></i>
-                                        <div class="fw-bold mt-2 text-light">Research</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a href="/research.html" class="btn btn-outline-primary me-2">Research →</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 mb-3">
-                                <a href="/articles.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2" data-smart-key="articles">5+</span>
-                                        <i class="bi bi-file-text text-primary fs-1"></i>
-                                        <div class="fw-bold mt-2 text-light">Articles</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a href="/articles.html" class="btn btn-outline-primary me-2">Articles →</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 mb-3">
-                                <a target="_blank" href="https://smartlegionlab.ru/applications.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2" data-smart-key="applications">20+</span>
-                                        <i class="bi bi-grid-3x3-gap text-primary fs-1"></i>
-                                        <div class="fw-bold mt-2 text-light">Applications</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a target="_blank" href="https://smartlegionlab.ru/applications.html" class="btn btn-outline-primary me-2">Applications →</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 mb-3">
-                                <a target="_blank" href="https://smartlegionlab.ru/ecosystems.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2" data-smart-key="ecosystems">6+</span>
-                                        <i class="bi bi-diagram-3 text-primary fs-1"></i>
-                                        <div class="fw-bold mt-2 text-light">Ecosystems</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a target="_blank" href="https://smartlegionlab.ru/ecosystems.html" class="btn btn-outline-primary me-2">Ecosystems →</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 mb-3">
-                                <a target="_blank" href="https://smartlegionlab.ru/projects.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2" data-smart-key="repos">64+</span>
-                                        <i class="bi bi-github text-primary fs-1"></i>
-                                        <div class="fw-bold mt-2 text-light">Projects</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a target="_blank" href="https://smartlegionlab.ru/projects.html" class="btn btn-outline-primary me-2">Projects →</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6 mb-3">
-                                <a target="_blank" href="https://smartlegionlab.ru/packages.html" class="text-decoration-none" style="display: block;">
-                                    <div class="p-3 card-custom position-relative" style="background: rgba(13, 110, 253, 0.05); border-radius: 16px;">
-                                        <span class="badge bg-primary text-light rounded-pill position-absolute top-0 end-0 m-2" data-smart-key="pypi">25+</span>
-                                        <i class="bi bi-box-seam text-primary fs-1"></i>
-                                            <div class="fw-bold mt-2 text-light">Packages</div>
-                                    </div>
-                                </a>
-                                <div class="text-center mt-4">
-                                    <a target="_blank" href="https://smartlegionlab.ru/packages.html" class="btn btn-outline-primary me-2">Packages →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <div class="content-section">
-                <div class="container text-center">
-                    <h2 class="section-title">Connect & Collaborate</h2>
-                    <div class="mb-4">
-                        <a target="_blank" href="https://smartlegionlab.ru" class="btn btn-outline-primary m-1">Website</a>
-                        <a href="mailto:smartlegionlab@gmail.com" class="btn btn-outline-primary m-1">Email</a>
-                        <a target="_blank" href="https://github.com/smartlegionlab" class="btn btn-outline-primary m-1">GitHub</a>
-                        <a target="_blank" href="https://orcid.org/0009-0006-3427-9611" class="btn btn-outline-primary m-1">ORCID</a>
-                        <a target="_blank" href="https://zenodo.org/records/17204738" class="btn btn-outline-primary m-1">Zenodo</a>
-                        <a target="_blank" href="https://pypi.org/user/smartlegionlab/" class="btn btn-outline-primary m-1">PyPI</a>
-                        <a target="_blank" href="https://dev.to/smartlegionlab" class="btn btn-outline-primary m-1">Dev.to</a>
-                    </div>
-                    <hr>
-                    <footer>
-                        <p>© <span id="currentYear"></span> <a class="author-link" target="_blank" href="https://github.com/smartlegionlab">Alexander Suvorov</a> | <a class="author-link" href="https://github.com/smartlegionlab/alexander-suvorov">v3.0.10</a></p>
-                    </footer>
-                </div>
-            </div>
-
-        </div>
+    <div class="sidebar-header">
+        <a href="/" class="logo">
+            Alexander Suvorov
+        </a>
     </div>
 
-    <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/stats-manager.js"></script>
-    <script src="js/particle-background.js"></script>
-    <script src="js/scroll-manager.js"></script>
-    <script src="js/animation-manager.js"></script>
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof ScrollManager !== 'undefined') new ScrollManager();
-        });
-    </script>
+    <div class="sidebar-menu">
+         <a href="https://smartlegionlab.ru/research.html" class="menu-item">
+            <i class="bi bi-mortarboard"></i>
+            <span>Research & Publications</span>
+        </a>
+        <a href="https://smartlegionlab.ru/ecosystems.html" class="menu-item">
+            <i class="bi bi-diagram-3"></i>
+            <span>Ecosystems</span>
+        </a>
+        <a href="https://smartlegionlab.ru/applications.html" class="menu-item">
+            <i class="bi bi-grid-3x3-gap-fill"></i>
+            <span>Applications</span>
+        </a>
+        <a href="https://smartlegionlab.ru/projects.html" class="menu-item">
+            <i class="bi bi-code-slash"></i>
+            <span>Projects</span>
+        </a>
+        <a href="https://smartlegionlab.ru/libraries.html" class="menu-item">
+            <i class="bi bi-box-seam"></i>
+            <span>Libraries</span>
+        </a>
+        <a href="https://smartlegionlab.ru/articles.html" class="menu-item">
+            <i class="bi bi-newspaper"></i>
+            <span>Articles</span>
+        </a>
+        <a href="https://smartlegionlab.ru/profiles/smartlegionlab.html" class="menu-item">
+            <i class="bi bi-people"></i>
+            <span>Contact As</span>
+        </a>
+    </div>
+
+    <div class="sidebar-footer">
+        <p>© <a class="author-link" target="_blank" href="https://github.com/smartlegionlab">Smart Legion Lab</a></p>
+    </div>
+</div>
+
+<div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+</div>
+
+<button class="scroll-to-top" id="scrollToTop">
+    <i class="bi bi-chevron-up"></i>
+</button>
+
+<!-- end nav -->
+
+<!-- content -->
+
+<div class="container">
+    <div class="custom-margin-top">
+
+        <h1 class="text-center text-primary">Alexander Suvorov <sup class="text-warning">Sr.</sup></h1>
+        <p class="text-center">Computer Science Researcher | Paradigm Creator | Chief Systems Architect & Full-Stack Developer </p>
+        <p class="text-center">Founder of <a href="https://smartlegionlab.ru">Smart Legion Lab</a></p>
+        <hr>
+
+        <div style="padding: 5px">
+            <div class="content-section">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                            <div class="p-3 card-custom position-relative explore-block-style">
+                                <span class="badge text-light rounded-pill position-absolute smart-badge" data-smart-key="publications">
+                                    4+
+                                </span>
+                                <i class="bi bi-mortarboard text-primary fs-1"></i>
+                                <div class="fw-bold mt-2 text-light">Research & Publications</div>
+                                <hr>
+                                <div class="text-center mt-4">
+                                    <a href="https://smartlegionlab.ru/research.html" class="btn btn-sm btn-outline-primary me-2">View →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                            <div class="p-3 card-custom position-relative explore-block-style">
+                                <span class="badge text-light rounded-pill position-absolute smart-badge" data-smart-key="ecosystems">
+                                    6+
+                                </span>
+                                <i class="bi bi-diagram-3 text-primary fs-1"></i>
+                                <div class="fw-bold mt-2 text-light">Ecosystems</div>
+                                <hr>
+                                <div class="text-center mt-4">
+                                    <a href="https://smartlegionlab.ru/ecosystems.html" class="btn btn-sm btn-outline-primary me-2">View →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                            <div class="p-3 card-custom position-relative explore-block-style">
+                                <span class="badge text-light rounded-pill position-absolute smart-badge">
+                                    34+
+                                </span>
+                                <i class="bi bi-grid-3x3-gap text-primary fs-1"></i>
+                                <div class="fw-bold mt-2 text-light">Applications</div>
+                                <hr>
+                                <div class="text-center mt-4">
+                                    <a href="https://smartlegionlab.ru/applications.html" class="btn btn-sm btn-outline-primary me-2">View →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                            <div class="p-3 card-custom position-relative explore-block-style">
+                                <span class="badge text-light rounded-pill position-absolute smart-badge">
+                                    92+
+                                </span>
+                                <i class="bi bi-code-slash text-primary fs-1"></i>
+                                <div class="fw-bold mt-2 text-light">Projects</div>
+                                <hr>
+                                <div class="text-center mt-4">
+                                    <a href="https://smartlegionlab.ru/projects.html" class="btn btn-sm btn-outline-primary me-2">View →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                            <div class="p-3 card-custom position-relative explore-block-style">
+                                <span class="badge text-light rounded-pill position-absolute smart-badge" data-smart-key="libraries">
+                                    25+
+                                </span>
+                                <i class="bi bi-box-seam text-primary fs-1"></i>
+                                <div class="fw-bold mt-2 text-light">Libraries</div>
+                                <hr>
+                                <div class="text-center mt-4">
+                                    <a href="https://smartlegionlab.ru/libraries.html" class="btn btn-sm btn-outline-primary me-2">View →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-3">
+                            <div class="p-3 card-custom position-relative explore-block-style">
+                                <span class="badge text-light rounded-pill position-absolute smart-badge" data-smart-key="articles">
+                                    4+
+                                </span>
+                                <i class="bi bi-newspaper text-primary fs-1"></i>
+                                <div class="fw-bold mt-2 text-light">Articles</div>
+                                <hr>
+                                <div class="text-center mt-4">
+                                    <a href="https://smartlegionlab.ru/articles.html" class="btn btn-sm btn-outline-primary me-2">View →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-group-sm mb-3" role="group" aria-label="Button group" style="width: 100%">
+                            <a target="_blank" href="https://smartlegionlab.ru" class="btn btn-outline-primary">Lab <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            <a target="_blank" href="https://github.com/smartlegionlab" class="btn btn-outline-primary">GitHub <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            <a target="_blank" href="mailto:smartlegionlab@gmail.com" class="btn btn-outline-primary">Email <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            <a target="_blank" href="https://orcid.org/0009-0006-3427-9611" class="btn btn-outline-primary">ORCID <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            <a target="_blank" href="https://pypi.org/user/smartlegionlab/" class="btn btn-outline-primary">PyPI <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            <a target="_blank" href="https://zenodo.org/records/17204738" class="btn btn-outline-primary">Zenodo <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                            <a target="_blank" href="https://dev.to/smartlegionlab" class="btn btn-outline-primary">Dev.to <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- end content -->
+
+<!-- footer -->
+
+<div class="content-section">
+    <div class="sidebar-footer">
+        <p>© <span id="currentYear">2026</span> <a class="author-link" target="_blank" href="https://github.com/smartlegionlab">Alexander Suvorov</a></p>
+    </div>
+</div>
+
+<button id="consoleToggle" class="btn btn-sm btn-outline-success position-fixed" style="bottom: 20px; left: 20px; z-index: 9999; opacity: 0.7; border-radius: 20px;">
+    <i class="bi bi-terminal"></i> Console
+</button>
+
+<div id="devConsole" style="display: none; position: fixed; bottom: 70px; left: 20px; width: 90%; max-width: 500px; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(4px); border-right: 3px solid #00ff9d; border-radius: 6px; z-index: 9998; font-family: 'Courier New', monospace; box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);">
+    <div style="padding: 8px 12px; background: rgba(0, 255, 157, 0.15); border-bottom: 1px solid #00ff9d;">
+        <span style="color: #00ff9d; font-size: 12px;">╭─[Smart Legion Lab Console]</span>
+        <button id="consoleClose" style="float: right; background: none; border: none; color: #ff4444; cursor: pointer; font-size: 16px;"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div id="consoleOutput" style="height: 300px; overflow-y: auto; padding: 8px; color: #00ff9d; font-size: 11px; line-height: 1.4;">
+        <div style="color: #666;">╰─$ Type 'help' for commands</div>
+    </div>
+    <div style="padding: 6px 10px; border-top: 1px solid #00ff9d;">
+        <span style="color: #00ff9d; font-size: 11px;">$</span>
+        <input type="text" id="consoleInput" placeholder="command" style="background: transparent; border: none; color: #00ff9d; font-family: 'Courier New', monospace; font-size: 11px; width: 85%; outline: none; margin-left: 5px;">
+    </div>
+</div>
+
+<!-- end footer -->
+
+
+<!-- scripts -->
+<script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/stats-manager.js"></script>
+<script src="js/particle-background.js"></script>
+<script src="js/scroll-manager.js"></script>
+<script src="js/smartpasslib.js"></script>
+<script src="js/console-game.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/console.js"></script>
+<script src="js/sidebar.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof ScrollManager !== 'undefined') new ScrollManager();
+    });
+</script>
+<!-- end scripts -->
 </body>
 </html>

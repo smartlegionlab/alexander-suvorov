@@ -1,63 +1,65 @@
 /**
  * StatsManager
  *
- * HOW TO USE:
+ * Usage:
  *
- * Add data-smart-key to any element
+ * Add data-smart-key to any element to display stats.
  *
- * <span data-smart-key="experience">10+</span>
- * <span data-smart-key="paradigms">4</span>
- * <span data-smart-key="paradigm.unique_views">1K+</span>
- * <span data-smart-key="paradigm.unique_downloads">896+</span>
- * <span data-smart-key="paradigm.total_views">1.5K+</span>
- * <span data-smart-key="pointerParadigm.unique_views">425</span>
+ * Available keys:
+ *   experience, paradigms, ecosystems, repos, pypi,
+ *   projects, articles, applications, publications, libraries
  *
- * AVAILABLE KEYS:
- * - experience, paradigms, ecosystems, repos, pypi, projects, users, articles, monthly_downloads
- * - {recordKey}.unique_views, {recordKey}.unique_downloads
- * - {recordKey}.total_views, {recordKey}.total_downloads
- * - paradigm.unique_views, paradigm.unique_downloads (sum of all)
- * - paradigm.total_views, paradigm.total_downloads (sum of all)
+ * Nested keys:
+ *   {recordKey}.unique_views, {recordKey}.unique_downloads
+ *   {recordKey}.total_views, {recordKey}.total_downloads
+ *   paradigm.unique_views, paradigm.unique_downloads (sum of all records)
+ *   paradigm.total_views, paradigm.total_downloads (sum of all records)
+ *
+ * Performance:
+ *   Data is loaded lazily based on page requirements.
+ *   Only needed JSON files (repos.json, zenodo.json)
+ *   are fetched when corresponding data-smart-key elements exist.
+ *
+ * Example:
+ *   <span data-smart-key="projects">70+</span>
+ *   <span data-smart-key="paradigm.unique_views">1K+</span>
+ *   <span data-smart-key="pointerParadigm.unique_views">425</span>
+ *
+ * Profiles:
+ *   <div data-smart-profile="alexander-suvorov">
+ *       <span data-smart-profile-field="name">Alexander Suvorov</span>
+ *       <span data-smart-profile-field="github">smartlegionlab</span>
+ *       <span data-smart-profile-field="orcid">0009-0006-3427-9611</span>
+ *       <span data-smart-profile-field="career_start">2015</span>
+ *   </div>
  */
 
 class StatsManager {
     constructor() {
         this.config = CONFIG;
-        this.debug = CONFIG.DEBUG || false;
         this.data = null;
+        this.loaded = false;
         this.init();
     }
 
-    log(...args) {
-        if (this.debug) console.log(...args);
-    }
-
-    warn(...args) {
-        if (this.debug) console.warn(...args);
-    }
-
     async init() {
-        this.log('StatsManager init');
         this.data = this.getDefaultData();
-        await this.loadAllData();
+        await this.loadRequiredData();
         this.updateAll();
-        this.log('StatsManager ready', this.data);
+        this.loaded = true;
     }
 
     getDefaultData() {
         const data = {
-            experience: this.calcExperience(),
+            experience: this.calcExperienceForProfile(this.config.PROFILES[0]),
             paradigms: this.config.CONSTANTS.PARADIGMS,
             ecosystems: this.config.CONSTANTS.ECOSYSTEMS_COUNT,
             applications: this.config.CONSTANTS.APPLICATIONS,
-            projects: this.config.CONSTANTS.PROJECTS_DELIVERED,
-            articles: this.config.CONSTANTS.TECH_ARTICLES,
-            users: this.config.CONSTANTS.USERS_SUPPORTED,
-            commits: this.config.CONSTANTS.COMMITS,
+            projects: this.config.CONSTANTS.PROJECTS_COUNT,
+            articles: this.config.CONSTANTS.ARTICLES_COUNT,
             publications: this.config.CONSTANTS.PUBLICATIONS,
-            repos: this.config.DEFAULTS.REPOS_COUNT,
-            pypi: this.config.DEFAULTS.PYPI_PACKAGES_COUNT,
-            monthly_downloads: this.config.DEFAULTS.MONTHLY_DOWNLOADS,
+            libraries: this.config.CONSTANTS.LIBRARIES_COUNT,
+            repos: this.config.CONSTANTS.PROJECTS_COUNT,
             paradigm: {
                 unique_views: 0,
                 unique_downloads: 0,
@@ -85,35 +87,12 @@ class StatsManager {
             }
         }
 
-        this.log('  📋 DEFAULT DATA (from CONFIG):');
-        this.log(`     experience: ${data.experience} (from CAREER_START_YEAR)`);
-        this.log(`     paradigms: ${data.paradigms} (from ZENODO_RECORDS count)`);
-        this.log(`     ecosystems: ${data.ecosystems} (from CONSTANTS)`);
-        this.log(`     projects: ${data.projects} (from CONSTANTS)`);
-        this.log(`     articles: ${data.articles} (from CONSTANTS)`);
-        this.log(`     users: ${data.users} (from CONSTANTS)`);
-        this.log(`     repos: ${data.repos} (from DEFAULTS)`);
-        this.log(`     pypi: ${data.pypi} (from DEFAULTS)`);
-        this.log(`     monthly_downloads: ${data.monthly_downloads} (from DEFAULTS)`);
-        this.log(`     paradigm.unique_views: ${data.paradigm.unique_views} (sum from RESEARCH_STATS)`);
-        this.log(`     paradigm.unique_downloads: ${data.paradigm.unique_downloads} (sum from RESEARCH_STATS)`);
-        this.log(`     paradigm.total_views: ${data.paradigm.total_views} (sum from RESEARCH_STATS)`);
-        this.log(`     paradigm.total_downloads: ${data.paradigm.total_downloads} (sum from RESEARCH_STATS)`);
-
-        for (const key in this.config.ZENODO_RECORDS) {
-            if (data[key]) {
-                this.log(`     ${key}.unique_views: ${data[key].unique_views} (from RESEARCH_STATS)`);
-                this.log(`     ${key}.unique_downloads: ${data[key].unique_downloads} (from RESEARCH_STATS)`);
-                this.log(`     ${key}.total_views: ${data[key].total_views} (from RESEARCH_STATS)`);
-                this.log(`     ${key}.total_downloads: ${data[key].total_downloads} (from RESEARCH_STATS)`);
-            }
-        }
-
         return data;
     }
 
-    calcExperience() {
-        const start = this.config.PROFILE.CAREER_START_YEAR;
+    calcExperienceForProfile(profile) {
+        if (!profile || !profile.career_start) return 1;
+        const start = profile.career_start;
         const now = new Date().getFullYear();
         let years = now - start;
         const month = new Date().getMonth();
@@ -121,13 +100,33 @@ class StatsManager {
         return Math.max(years, 1);
     }
 
-    async loadAllData() {
-        this.log('  🔄 LOADING REAL DATA FROM FILES:');
-        await Promise.allSettled([
-            this.loadRepos(),
-            this.loadPyPI(),
-            this.loadZenodo()
-        ]);
+    getRequiredKeys() {
+        const elements = document.querySelectorAll('[data-smart-key]');
+        const keys = new Set();
+        elements.forEach(el => {
+            const key = el.getAttribute('data-smart-key');
+            keys.add(key.split('.')[0]);
+        });
+        return keys;
+    }
+
+    async loadRequiredData() {
+        const requiredKeys = this.getRequiredKeys();
+        const tasks = [];
+
+        if (requiredKeys.has('projects') || requiredKeys.has('repos') || requiredKeys.has('libraries')) {
+            tasks.push(this.loadRepos());
+        }
+
+        const zenodoKeys = Object.keys(this.config.ZENODO_RECORDS);
+        const needsZenodo = zenodoKeys.some(key => requiredKeys.has(key)) || requiredKeys.has('paradigm');
+        if (needsZenodo) {
+            tasks.push(this.loadZenodo());
+        }
+
+        if (tasks.length > 0) {
+            await Promise.allSettled(tasks);
+        }
     }
 
     async loadRepos() {
@@ -135,26 +134,19 @@ class StatsManager {
             const res = await fetch('/data/repos.json');
             if (!res.ok) throw new Error();
             const repos = await res.json();
-            const valid = repos.filter(r => !r.archived && !this.config.EXCLUDED_REPOSITORIES.includes(r.name));
-            const old = this.data.repos;
-            this.data.repos = valid.length;
-            this.log(`     repos: ${old} (DEFAULT) → ${this.data.repos} (FROM repos.json)`);
-        } catch(e) {
-            this.warn(`     repos failed, using default: ${this.data.repos}`);
-        }
-    }
+            const valid = repos.filter(r => !r.archived);
 
-    async loadPyPI() {
-        try {
-            const res = await fetch('/data/pypi.json');
-            if (!res.ok) throw new Error();
-            const pkgs = await res.json();
-            const valid = pkgs.filter(p => !p.error);
-            const old = this.data.pypi;
-            if (valid.length > 0) this.data.pypi = valid.length;
-            this.log(`     pypi: ${old} (DEFAULT) → ${this.data.pypi} (FROM pypi.json)`);
+            if (valid.length > 0) {
+                this.data.projects = valid.length;
+                this.data.repos = valid.length;
+
+                const libraries = valid.filter(r => r.pypi_url && r.pypi_url !== '');
+                if (libraries.length > 0) {
+                    this.data.libraries = libraries.length;
+                }
+            }
         } catch(e) {
-            this.warn(`     pypi failed, using default: ${this.data.pypi}`);
+            // Keep default values from CONFIG.CONSTANTS
         }
     }
 
@@ -169,23 +161,13 @@ class StatsManager {
 
             for (const key in this.config.ZENODO_RECORDS) {
                 if (zenodo[key]) {
-                    const old = this.data[key];
                     this.data[key] = zenodo[key];
                     uniqueViews += zenodo[key].unique_views || 0;
                     uniqueDownloads += zenodo[key].unique_downloads || 0;
                     totalViews += zenodo[key].total_views || 0;
                     totalDownloads += zenodo[key].total_downloads || 0;
-                    this.log(`     ${key}: unique_views ${old?.unique_views} (DEFAULT) → ${zenodo[key].unique_views} (FROM zenodo.json)`);
-                    this.log(`     ${key}: unique_downloads ${old?.unique_downloads} (DEFAULT) → ${zenodo[key].unique_downloads} (FROM zenodo.json)`);
-                    this.log(`     ${key}: total_views ${old?.total_views} (DEFAULT) → ${zenodo[key].total_views} (FROM zenodo.json)`);
-                    this.log(`     ${key}: total_downloads ${old?.total_downloads} (DEFAULT) → ${zenodo[key].total_downloads} (FROM zenodo.json)`);
                 }
             }
-
-            const oldUniqueViews = this.data.paradigm.unique_views;
-            const oldUniqueDownloads = this.data.paradigm.unique_downloads;
-            const oldTotalViews = this.data.paradigm.total_views;
-            const oldTotalDownloads = this.data.paradigm.total_downloads;
 
             if (uniqueViews > 0) {
                 this.data.paradigm.unique_views = uniqueViews;
@@ -193,63 +175,83 @@ class StatsManager {
                 this.data.paradigm.total_views = totalViews;
                 this.data.paradigm.total_downloads = totalDownloads;
             }
-
-            this.log(`     paradigm.unique_views: ${oldUniqueViews} (DEFAULT) → ${this.data.paradigm.unique_views} (FROM zenodo.json)`);
-            this.log(`     paradigm.unique_downloads: ${oldUniqueDownloads} (DEFAULT) → ${this.data.paradigm.unique_downloads} (FROM zenodo.json)`);
-            this.log(`     paradigm.total_views: ${oldTotalViews} (DEFAULT) → ${this.data.paradigm.total_views} (FROM zenodo.json)`);
-            this.log(`     paradigm.total_downloads: ${oldTotalDownloads} (DEFAULT) → ${this.data.paradigm.total_downloads} (FROM zenodo.json)`);
         } catch(e) {
-            this.warn(`     zenodo failed, using defaults`);
+            // Keep default values from DEFAULTS.RESEARCH_STATS
         }
     }
 
     updateAll() {
-        this.log('  🎨 UPDATING DOM:');
-
-        const flatKeys = ['experience', 'paradigms', 'ecosystems', 'repos', 'pypi', 'projects', 'users', 'articles', 'monthly_downloads'];
+        const flatKeys = [
+            'experience', 'paradigms', 'ecosystems', 'repos',
+            'projects', 'articles', 'applications', 'publications', 'libraries'
+        ];
 
         flatKeys.forEach(key => {
-            let val = this.data[key];
+            const val = this.data[key];
             if (val === undefined) return;
-            let display = (key === 'users') ? val : val + '+';
-            if (key === 'monthly_downloads') display = this.formatNumberRound(val) + 'K+';
+            const display = val + '+';
             document.querySelectorAll(`[data-smart-key="${key}"]`).forEach(el => {
-                if (el.textContent !== display) {
-                    this.log(`     ${key}: ${el.textContent} → ${display}`);
-                    el.textContent = display;
-                }
+                el.textContent = display;
             });
         });
 
-        const updateNested = (obj, prefix = '') => {
-            for (const key in obj) {
-                if (typeof obj[key] === 'object' && obj[key] !== null) {
-                    updateNested(obj[key], prefix ? `${prefix}.${key}` : key);
+        this.updateNested(this.data);
+        this.updateProfiles();
+        this.updateVersion();
+    }
+
+    updateNested(obj, prefix = '') {
+        for (const key in obj) {
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                this.updateNested(obj[key], prefix ? `${prefix}.${key}` : key);
+            } else {
+                const fullKey = prefix ? `${prefix}.${key}` : key;
+                let val = obj[key];
+                if (val === undefined) return;
+
+                let display = val;
+                if (fullKey.includes('views') || fullKey.includes('downloads')) {
+                    display = this.formatNumberRound(val);
+                    if (fullKey.startsWith('paradigm.')) display += '+';
                 } else {
-                    const fullKey = prefix ? `${prefix}.${key}` : key;
-                    let val = obj[key];
-                    if (val === undefined) return;
-
-                    let display = val;
-                    if (fullKey.includes('views') || fullKey.includes('downloads')) {
-                        display = this.formatNumberRound(val);
-                        if (fullKey.startsWith('paradigm.')) display += '+';
-                    } else if (fullKey !== 'users') {
-                        display = val + '+';
-                    }
-
-                    document.querySelectorAll(`[data-smart-key="${fullKey}"]`).forEach(el => {
-                        if (el.textContent !== display) {
-                            this.log(`     ${fullKey}: ${el.textContent} → ${display}`);
-                            el.textContent = display;
-                        }
-                    });
+                    display = val + '+';
                 }
-            }
-        };
 
-        updateNested(this.data);
-        this.log('  ✅ DOM updated');
+                document.querySelectorAll(`[data-smart-key="${fullKey}"]`).forEach(el => {
+                    el.textContent = display;
+                });
+            }
+        }
+    }
+
+    updateProfiles() {
+        const profiles = this.config.PROFILES || [];
+        profiles.forEach(profile => {
+            const container = document.querySelector(`[data-smart-profile="${profile.id}"]`);
+            if (!container) return;
+
+            const nameEl = container.querySelector('[data-smart-profile-field="name"]');
+            const githubEl = container.querySelector('[data-smart-profile-field="github"]');
+            const orcidEl = container.querySelector('[data-smart-profile-field="orcid"]');
+            const careerEl = container.querySelector('[data-smart-profile-field="career_start"]');
+
+            if (nameEl) nameEl.textContent = profile.name;
+            if (githubEl) githubEl.textContent = profile.github;
+            if (orcidEl) orcidEl.textContent = profile.orcid;
+            if (careerEl) {
+                const years = this.calcExperienceForProfile(profile);
+                careerEl.textContent = years + '+ years';
+            }
+        });
+    }
+
+    updateVersion() {
+        const version = this.config.VERSION;
+        if (!version) return;
+
+        document.querySelectorAll('[data-smart-version]').forEach(el => {
+            el.textContent = version;
+        });
     }
 
     formatNumberRound(num) {
@@ -259,12 +261,6 @@ class StatsManager {
         if (num >= 1000) {
             return (num / 1000).toFixed(1) + 'K';
         }
-        return num.toString();
-    }
-
-    formatNum(num) {
-        if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-        if (num >= 1000) return (num / 1000).toFixed(0) + 'K';
         return num.toString();
     }
 }

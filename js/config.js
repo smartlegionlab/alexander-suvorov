@@ -1,23 +1,38 @@
+/**
+ * StatsManager Configuration
+ *
+ * PROFILES - Array of profile objects. Add new profiles to this array.
+ * CONSTANTS - Static values that don't change. Used as fallback if fetch fails.
+ * ZENODO_RECORDS - Zenodo record IDs for fetching stats.
+ * DEFAULTS.RESEARCH_STATS - Fallback values if Zenodo fetch fails.
+ */
 const CONFIG = {
-    DEBUG: false,
+    PROFILES: [
+        {
+            id: 'alexander-suvorov',
+            name: 'Alexander Suvorov',
+            github: 'smartlegionlab',
+            orcid: '0009-0006-3427-9611',
+            career_start: 2011
+        },
+        {
+            id: 'alexander-suvorov-jr',
+            name: 'Alexander Suvorov Jr.',
+            github: 'aixandrolab',
+            orcid: '0009-0006-3427-9611',
+            career_start: 2020
+        },
 
-    PROFILE: {
-        NAME: 'Alexander Suvorov',
-        GITHUB_USERNAME: 'smartlegionlab',
-        DEVTO_USERNAME: 'smartlegionlab',
-        ORCID: '0009-0006-3427-9611',
-        CAREER_START_YEAR: 2015
-    },
+    ],
 
     CONSTANTS: {
         ECOSYSTEMS_COUNT: 6,
-        PROJECTS_DELIVERED: 350,
-        TECH_ARTICLES: 5,
-        USERS_SUPPORTED: '500K+',
-        COMMITS: "11K",
+        PROJECTS_COUNT: 70,
+        ARTICLES_COUNT: 4,
         PARADIGMS: 3,
-        APPLICATIONS: 24,
-        PUBLICATIONS: 4
+        APPLICATIONS: 26,
+        PUBLICATIONS: 4,
+        LIBRARIES_COUNT: 30
     },
 
     ZENODO_RECORDS: {
@@ -27,48 +42,34 @@ const CONFIG = {
         pchParadigm: '17614888'
     },
 
-    PYPI_PACKAGES: [
-        'smartpasslib', 'clipassman', 'clipassgen', 'smart-tsp-solver',
-        'smart-tsp-benchmark', 'smart-2fa-secure', 'babylonian-image-library',
-        'smart-babylon-library', 'commandman', 'smartpathlibrary', 'smartexecutorlib',
-        'climan', 'github-ssh-key', 'commandpack', 'smartprinter', 'smartcliapp',
-        'commandex', 'smartrandom', 'smarttextdecorator', 'smartauthen',
-        'smart-redis-storage', 'smart-text-randomizer', 'smart-repository-manager-core',
-        'forgejo-sync-manager-core', 'django-smart-dynamic-path', 'smart-dynamic-path',
-        'smart-legion-lab-library'
-    ],
-
     DEFAULTS: {
-        REPOS_COUNT: 70,
-        PYPI_PACKAGES_COUNT: 27,
-        MONTHLY_DOWNLOADS: 15000,
         RESEARCH_STATS: {
             pointerParadigm: {
-                unique_views: 425,
-                unique_downloads: 346,
-                total_views: 655,
-                total_downloads: 676
+                unique_views: 485,
+                unique_downloads: 370,
+                total_views: 727,
+                total_downloads: 708
             },
             localDataParadigm: {
-                unique_views: 298,
-                unique_downloads: 260,
-                total_views: 392,
-                total_downloads: 417
+                unique_views: 324,
+                unique_downloads: 282,
+                total_views: 427,
+                total_downloads: 452
             },
             deterministicEngine: {
-                unique_views: 219,
-                unique_downloads: 165,
-                total_views: 283,
-                total_downloads: 4283
+                unique_views: 244,
+                unique_downloads: 186,
+                total_views: 311,
+                total_downloads: 311
             },
             pchParadigm: {
-                unique_views: 133,
-                unique_downloads: 125,
-                total_views: 170,
-                total_downloads: 212
+                unique_views: 158,
+                unique_downloads: 145,
+                total_views: 201,
+                total_downloads: 242
             }
         }
     },
 
-    EXCLUDED_REPOSITORIES: ['smartlegionlab']
+    VERSION: 'v7.2.6'
 };
